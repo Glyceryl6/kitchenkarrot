@@ -18,12 +18,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * @author DustW
  **/
 public class PlateModelRegistry {
+
     private static final Map<ResourceLocation, BakedModel> MODEL_MAP = new HashMap<>();
 
     public static ResourceLocation DEFAULT_NAME = new ResourceLocation(Kitchenkarrot.MOD_ID, "plate");
@@ -43,20 +45,17 @@ public class PlateModelRegistry {
         return new ModelResourceLocation(resourceLocation.getNamespace(), "plates/" + resourceLocation.getPath(), "inventory");
     }
 
+    @SuppressWarnings("unused")
     public static void register(ModelRegistryEvent e) {
         ResourceManager manager = Minecraft.getInstance().getResourceManager();
-
         for (String namespace : manager.getNamespaces()) {
             try {
-                var resourceName = new ResourceLocation(namespace, "plate/list.json");
-
+                ResourceLocation resourceName = new ResourceLocation(namespace, "plate/list.json");
                 if (manager.hasResource(resourceName)) {
-                    var resources = manager.getResources(resourceName);
-
+                    List<Resource> resources = manager.getResources(resourceName);
                     for (Resource resource : resources) {
-                        var reader = new InputStreamReader(resource.getInputStream());
-                        var list = JsonUtils.INSTANCE.noExpose.fromJson(reader, PlateList.class);
-
+                        InputStreamReader reader = new InputStreamReader(resource.getInputStream());
+                        PlateList list = JsonUtils.INSTANCE.noExpose.fromJson(reader, PlateList.class);
                         PlateList.INSTANCE.plates.addAll(list.plates);
                     }
                 }
@@ -65,37 +64,30 @@ public class PlateModelRegistry {
             }
         }
 
-        var instance = ForgeModelBakery.instance();
-
-        var defaultUnbakedModel = getModel(DEFAULT_NAME.toString());
-
-        instance.unbakedCache.put(DEFAULT_NAME, defaultUnbakedModel);
-        instance.topLevelModels.put(DEFAULT_NAME, defaultUnbakedModel);
-
-        for (var info : PlateList.INSTANCE.plates) {
-            var model = getModel(info);
-
-            instance.unbakedCache.put(to(new ResourceLocation(info)), model);
-            instance.topLevelModels.put(to(new ResourceLocation(info)), model);
+        ForgeModelBakery instance = ForgeModelBakery.instance();
+        BlockModel defaultUnbakedModel = getModel(DEFAULT_NAME.toString());
+        if (instance != null) {
+            instance.unbakedCache.put(DEFAULT_NAME, defaultUnbakedModel);
+            instance.topLevelModels.put(DEFAULT_NAME, defaultUnbakedModel);
+            for (var info : PlateList.INSTANCE.plates) {
+                BlockModel model = getModel(info);
+                instance.unbakedCache.put(to(new ResourceLocation(info)), model);
+                instance.topLevelModels.put(to(new ResourceLocation(info)), model);
+            }
         }
     }
 
     static BlockModel getModel(String info) {
         ResourceManager manager = Minecraft.getInstance().getResourceManager();
-
-        var name = new ResourceLocation(info);
-        var namespace = name.getNamespace();
-        var path = name.getPath();
-
+        ResourceLocation name = new ResourceLocation(info);
+        String namespace = name.getNamespace();
+        String path = name.getPath();
         ForgeModelBakery.addSpecialModel(to(new ResourceLocation(info)));
-
-        var modelName = new ResourceLocation(namespace, "models/plates/" + path + ".json");
-
+        ResourceLocation modelName = new ResourceLocation(namespace, "models/plates/" + path + ".json");
         if (manager.hasResource(modelName)) {
             try {
-                var resource = manager.getResource(modelName);
-
-                var json = IOUtils.toString(resource.getInputStream(), StandardCharsets.UTF_8);
+                Resource resource = manager.getResource(modelName);
+                String json = IOUtils.toString(resource.getInputStream(), StandardCharsets.UTF_8);
                 return BlockModel.fromString(json);
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -107,12 +99,11 @@ public class PlateModelRegistry {
 
     public static void bakeModel(ModelBakeEvent evt) {
         MODEL_MAP.clear();
-
         MODEL_MAP.put(DEFAULT_NAME, evt.getModelManager().getModel(DEFAULT_NAME));
-
         for (String info : PlateList.INSTANCE.plates) {
-            var modelName = to(new ResourceLocation(info));
+            ModelResourceLocation modelName = to(new ResourceLocation(info));
             MODEL_MAP.put(from(modelName), evt.getModelManager().getModel(modelName));
         }
     }
+
 }

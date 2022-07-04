@@ -16,12 +16,14 @@ import net.minecraftforge.client.model.ForgeModelBakery;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * @author DustW
  **/
 public class CocktailModelRegistry {
+
     private static final Map<ResourceLocation, BakedModel> MODEL_MAP = new HashMap<>();
 
     public static BakedModel get(ResourceLocation resourceLocation) {
@@ -36,20 +38,17 @@ public class CocktailModelRegistry {
         return new ModelResourceLocation(resourceLocation.getNamespace(), "cocktail/" + resourceLocation.getPath(), "inventory");
     }
 
+    @SuppressWarnings("unused")
     public static void register(ModelRegistryEvent e) {
         ResourceManager manager = Minecraft.getInstance().getResourceManager();
-
         for (String namespace : manager.getNamespaces()) {
             try {
-                var resourceName = new ResourceLocation(namespace, "cocktail/list.json");
-
+                ResourceLocation resourceName = new ResourceLocation(namespace, "cocktail/list.json");
                 if (manager.hasResource(resourceName)) {
-                    var resources = manager.getResources(resourceName);
-
+                    List<Resource> resources = manager.getResources(resourceName);
                     for (Resource resource : resources) {
-                        var reader = new InputStreamReader(resource.getInputStream());
-                        var list = JsonUtils.INSTANCE.noExpose.fromJson(reader, CocktailList.class);
-
+                        InputStreamReader reader = new InputStreamReader(resource.getInputStream());
+                        CocktailList list = JsonUtils.INSTANCE.noExpose.fromJson(reader, CocktailList.class);
                         CocktailList.INSTANCE.cocktails.addAll(list.cocktails);
                     }
                 }
@@ -59,16 +58,13 @@ public class CocktailModelRegistry {
         }
 
         for (String cocktailName : CocktailList.INSTANCE.cocktails) {
-            var name = new ResourceLocation(cocktailName);
-            var namespace = name.getNamespace();
-            var path = name.getPath();
-
-            var json = "{\"parent\": \"minecraft:item/generated\", \"textures\": {\"layer0\":\"" + namespace + ":item/cocktail/" + path + "\"}}";
+            ResourceLocation name = new ResourceLocation(cocktailName);
+            String namespace = name.getNamespace();
+            String path = name.getPath();
+            String json = "{\"parent\": \"minecraft:item/generated\", \"textures\": {\"layer0\":\"" + namespace + ":item/cocktail/" + path + "\"}}";
             ForgeModelBakery.addSpecialModel(to(new ResourceLocation(cocktailName)));
-
-            var instance = ForgeModelBakery.instance();
-            var model = BlockModel.fromString(json);
-
+            ForgeModelBakery instance = ForgeModelBakery.instance();
+            BlockModel model = BlockModel.fromString(json);
             instance.unbakedCache.put(to(name), model);
             instance.topLevelModels.put(to(name), model);
         }
@@ -78,7 +74,7 @@ public class CocktailModelRegistry {
         MODEL_MAP.clear();
 
         for (String cocktailName : CocktailList.INSTANCE.cocktails) {
-            var modelName = to(new ResourceLocation(cocktailName));
+            ModelResourceLocation modelName = to(new ResourceLocation(cocktailName));
             MODEL_MAP.put(from(modelName), evt.getModelManager().getModel(modelName));
         }
 
@@ -88,4 +84,5 @@ public class CocktailModelRegistry {
                 "inventory"
         ), new CocktailBakedModel());
     }
+
 }

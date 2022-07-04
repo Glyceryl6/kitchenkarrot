@@ -1,0 +1,10 @@
+{
+    "type": "kitchenkarrot:plate",
+    "item": {
+      "item": "kitchenkarrot:dungeon_pizza",
+      "maxCount": 1
+    },
+    "cut": {
+      "out": "kitchenkarrot:dungeon_pizza_slice"
+    }
+  }

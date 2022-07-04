@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "123",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:bamboo"
+    },
+    "1": {
+      "tag": "forge:eggs"
+    },
+    "2": {
+      "item": "minecraft:baked_potato"
+    },
+    "3": {
+      "tag": "forge:salt"
+    }
+  },
+  "result": {
+    "item": "kitchenkarrot:bamboo_potato"
+  }
+}

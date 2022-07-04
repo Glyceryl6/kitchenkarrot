@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "kitchenkarrot:monster_lasagna"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "kitchenkarrot:small_monster_lasagna",
+      "count": 4
+    }
+  ]
+}

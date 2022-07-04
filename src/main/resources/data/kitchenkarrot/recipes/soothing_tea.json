@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:spore_blossom"
+    },
+    {
+      "item": "kitchenkarrot:ice_cubes"
+    },
+    {
+      "item": "kitchenkarrot:ice_cubes"
+    },
+    {
+      "item": "kitchenkarrot:ice_cubes"
+    },
+    {
+      "item": "minecraft:potion"
+    },
+    {
+      "item": "minecraft:potion"
+    }
+  ],
+  "result": {
+    "item": "kitchenkarrot:soothing_tea"
+  }
+}

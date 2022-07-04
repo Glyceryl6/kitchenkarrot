@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item": "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "minecraft:chorus_fruit"
+            },
+            {
+                "item" : "minecraft:chorus_fruit"
+            }
+        ],
+        "craftingtime":40,
+        "hunger":4,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:slow_falling","lvl":0,"duration":3600}
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:bucket"
+  },
+  "addition": {
+    "item": "minecraft:iron_nugget"
+  },
+  "result": {
+    "item": "kitchenkarrot:shaker"
+  }
+}

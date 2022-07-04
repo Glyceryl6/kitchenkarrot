@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"nanami",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:vodka_base"
+            },
+            {
+                "item" : "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            }
+        ],
+        "craftingtime":200,
+        "hunger":2,
+        "saturation":0,
+        "effect":[
+
+        ]
+    }
+}

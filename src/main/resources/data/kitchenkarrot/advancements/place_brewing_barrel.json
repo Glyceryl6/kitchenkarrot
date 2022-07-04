@@ -1,0 +1,31 @@
+{
+  "parent": "kitchenkarrot:get_acorn",
+  "display": {
+    "icon": {
+      "item": "kitchenkarrot:brewing_barrel"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.place_brewing_barrel.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.place_brewing_barrel.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "brewing_barrel": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "kitchenkarrot:brewing_barrel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "brewing_barrel"
+    ]
+  ]
+}

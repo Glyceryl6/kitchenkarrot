@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"早上",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:vodka_base"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "minecraft:blaze_powder"
+            },
+            {
+                "tag" : "forge:cooked_chicken"
+            }
+        ],
+        "craftingtime":80,
+        "hunger":1,
+        "saturation":1,
+        "effect":[
+            {"id":"minecraft:speed","lvl":20,"duration":100},
+            {"id":"minecraft:strength","lvl":1,"duration":1200}
+        ]
+    }
+}

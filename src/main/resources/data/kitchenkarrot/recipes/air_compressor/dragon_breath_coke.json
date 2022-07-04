@@ -1,0 +1,21 @@
+{
+  "type": "kitchenkarrot:air_compressing",
+  "ingredient": [
+    {
+      "tag": "forge:water"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "kitchenkarrot:ice_cubes"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    }
+  ],
+  "result": {
+    "item": "kitchenkarrot:dragon_breath_coke"
+  },
+  "craftingtime": 100
+}

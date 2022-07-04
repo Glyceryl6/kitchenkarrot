@@ -1,0 +1,37 @@
+{
+  "parent": "kitchenkarrot:plant_carrot",
+  "display": {
+    "icon": {
+      "item": "kitchenkarrot:gem_carrot"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.get_gem_carrot.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.get_gem_carrot.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "gem_carrot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kitchenkarrot:gem_carrot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gem_carrot"
+    ]
+  ]
+}

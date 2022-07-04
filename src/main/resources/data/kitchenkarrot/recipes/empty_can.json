@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "121",
+    " 1 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:iron_nugget"
+    },
+    "2": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "kitchenkarrot:empty_can",
+    "count": "4"
+  }
+}

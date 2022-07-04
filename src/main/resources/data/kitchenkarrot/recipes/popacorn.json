@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "kitchenkarrot:acorn"
+    },
+    {
+      "item": "kitchenkarrot:acorn"
+    },
+    {
+      "item": "kitchenkarrot:acorn"
+    },
+    {
+      "item": "kitchenkarrot:acorn"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "forge:cooking_oil"
+    },
+    {
+      "tag": "forge:salt"
+    }
+  ],
+  "result": {
+    "item": "kitchenkarrot:popacorn"
+  }
+}

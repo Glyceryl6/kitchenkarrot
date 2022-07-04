@@ -1,0 +1,7 @@
+{
+  "type": "kitchenkarrot:plate",
+  "item": {
+    "item": "kitchenkarrot:sweet_loaf_slice",
+    "maxCount": 3
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "kitchenkarrot:fries"
+    },
+    {
+      "item": "kitchenkarrot:fries"
+    },
+    {
+      "item": "locusazzurro_icaruswings:feather_wings"
+    },
+    {
+      "item": "locusazzurro_icaruswings:feather_wings"
+    },
+    {
+      "item": "kitchenkarrot:carrot_spices"
+    },
+    {
+      "item": "kitchenkarrot:carrot_spices"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "item": "kitchenkarrot:fried_chicken_combo"
+  }
+}

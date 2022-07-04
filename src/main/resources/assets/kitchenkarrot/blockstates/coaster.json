@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kitchenkarrot:block/coaster",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "kitchenkarrot:block/coaster",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "kitchenkarrot:block/coaster"
+    },
+    "facing=west": {
+      "model": "kitchenkarrot:block/coaster",
+      "y": 90
+    }
+  }
+}

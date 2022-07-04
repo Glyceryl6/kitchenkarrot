@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "kitchenkarrot:raw_veggie_rabbit"
+  },
+  "result": "kitchenkarrot:cooked_veggie_rabbit",
+  "experience": 0.5,
+  "cookingtime": 100
+}

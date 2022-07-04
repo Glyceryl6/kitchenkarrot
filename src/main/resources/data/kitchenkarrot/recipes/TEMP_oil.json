@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "kitchenkarrot:acorn"
+    }
+  ],
+  "result": {
+    "item": "kitchenkarrot:acorn_oil"
+  }
+}

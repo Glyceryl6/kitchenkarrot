@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "kitchenkarrot:shiny_pizza"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "kitchenkarrot:shiny_pizza_slice",
+      "count": 4
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "parent": "kitchenkarrot:place_brewing_barrel",
+  "display": {
+    "icon": {
+      "item": "kitchenkarrot:rum"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.drink_liquor.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.drink_liquor.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "rum": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:rum"
+          ]
+        }
+      }
+    },
+    "vodka": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:vodka"
+          ]
+        }
+      }
+    },
+    "mead": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:mead"
+          ]
+        }
+      }
+    },    
+    "acorn_wine": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:acorn_wine"
+          ]
+        }
+      }
+    },
+    "iced_melon_lager": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:iced_melon_lager"
+          ]
+        }
+      }
+    },
+    "glow_berry_lager": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:glow_berry_lager"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "glow_berry_lager","iced_melon_lager","rum","vodka","mead","acorn_wine"
+    ]
+  ]
+}

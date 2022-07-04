@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"饮水机",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:mead_base"
+            },
+            {
+                "item" : "minecraft:glow_berries"
+            },
+            {
+                "item" : "minecraft:golden_apple"
+            },
+            {
+                "item" : "minecraft:glowstone_dust"
+            }
+        ],
+        "craftingtime":140,
+        "hunger":1,
+        "saturation":6,
+        "effect":[
+            {"id":"minecraft:absorption","lvl":2,"duration":3000},
+            {"id":"minecraft:nausea","lvl":1,"duration":200}
+        ]
+    }
+}

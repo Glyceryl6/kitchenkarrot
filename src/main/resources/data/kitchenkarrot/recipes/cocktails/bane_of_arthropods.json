@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item": "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item" : "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item" : "kitchenkarrot:mead_base"
+            },
+            {
+                "item" : "minecraft:spider_eye"
+            }
+        ],
+        "craftingtime":60,
+        "hunger":6,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:nausea","lvl":0,"duration":600}
+        ]
+    }
+}

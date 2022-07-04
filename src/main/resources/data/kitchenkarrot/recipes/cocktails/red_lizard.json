@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item" : "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item" : "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item" : "minecraft:poppy"
+            }
+        ],
+        "craftingtime":95,
+        "hunger":0,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:strength","lvl":0,"duration":12000},
+            {"id":"minecraft:blindness","lvl":0,"duration":100}
+        ]
+    }
+}

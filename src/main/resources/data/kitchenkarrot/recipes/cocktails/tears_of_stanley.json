@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item" : "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item" : "minecraft:bone_meal"
+            },
+            {
+                "item" : "minecraft:weeping_vines"
+            }
+        ],
+        "craftingtime":100,
+        "hunger":0,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:levitation","lvl":1,"duration":120},
+            {"id":"minecraft:haste","lvl":2,"duration":4800}
+        ]
+    }
+}

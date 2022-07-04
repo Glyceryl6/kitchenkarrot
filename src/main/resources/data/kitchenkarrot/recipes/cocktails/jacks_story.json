@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item" : "minecraft:kelp"
+            }
+        ],
+        "craftingtime":70,
+        "hunger":0,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:conduit_power","lvl":0,"duration":6000}
+        ]
+    }
+}

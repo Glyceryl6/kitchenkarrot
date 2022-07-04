@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"minzhi",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "minecraft:ender_pearl"
+            }
+        ],
+        "craftingtime":60,
+        "hunger":4,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:nausea","lvl":1,"duration":400}
+        ]
+    }
+}

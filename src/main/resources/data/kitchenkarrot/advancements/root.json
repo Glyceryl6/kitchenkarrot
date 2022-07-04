@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kitchenkarrot:carrot_spices"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.root.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.root.desc"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/block/calcite.png"
+  },
+  "criteria": {
+    "root": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    [
+      "root"
+    ]
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": "kitchenkarrot:plate",
+  "item": {
+    "item": "kitchenkarrot:leafy_fresh_chocolate",
+    "maxCount": 10
+  }
+}

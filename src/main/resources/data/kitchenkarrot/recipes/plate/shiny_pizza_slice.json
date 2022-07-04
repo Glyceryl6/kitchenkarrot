@@ -1,0 +1,7 @@
+{
+  "type": "kitchenkarrot:plate",
+  "item": {
+    "item": "kitchenkarrot:shiny_pizza_slice",
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kitchenkarrot:block/brewing_barrel",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "kitchenkarrot:block/brewing_barrel",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "kitchenkarrot:block/brewing_barrel"
+    },
+    "facing=west": {
+      "model": "kitchenkarrot:block/brewing_barrel",
+      "y": 90
+    }
+  }
+}

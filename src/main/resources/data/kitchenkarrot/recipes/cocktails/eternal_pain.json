@@ -1,0 +1,31 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"稀神 サグメ",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item" : "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item" : "minecraft:ghast_tear"
+            },
+            {
+                "item" : "minecraft:blue_orchid"
+            }
+        ],
+        "craftingtime":60,
+        "hunger":1,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:speed","lvl":2,"duration":6000},
+            {"id":"minecraft:regenaration","lvl":1,"duration":2400},
+            {"id":"minecraft:wither","lvl":1,"duration":200}
+        ]
+    }
+}

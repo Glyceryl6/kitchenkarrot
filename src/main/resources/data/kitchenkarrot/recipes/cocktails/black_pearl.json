@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "minecraft:black_dye"
+            },
+            {
+                "item" : "minecraft:glow_berries"
+            }
+        ],
+        "craftingtime":90,
+        "hunger":1,
+        "saturation":1,
+        "effect":[
+            {"id":"minecraft:glowing","lvl":10,"duration":10000}
+        ]
+    }
+}

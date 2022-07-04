@@ -1,0 +1,31 @@
+{
+  "parent": "kitchenkarrot:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.plant_carrot.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.plant_carrot.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "carrot": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:carrots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "carrot"
+    ]
+  ]
+}

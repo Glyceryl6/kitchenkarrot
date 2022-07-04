@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "kitchenkarrot:feast_pizza"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "kitchenkarrot:feast_pizza_slice",
+      "count": 4
+    }
+  ]
+}

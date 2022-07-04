@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "tag" : "forge:milk"
+            },
+            {
+                "item" : "minecraft:sugar"
+            }
+        ],
+        "craftingtime":40,
+        "hunger":1,
+        "saturation":2,
+        "effect":[
+            {"id":"minecraft:instant_health","lvl":3,"duration":1}
+        ]
+    }
+}

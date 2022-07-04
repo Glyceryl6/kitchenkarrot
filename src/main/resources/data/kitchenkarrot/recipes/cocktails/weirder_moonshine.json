@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"佑希",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:milk"
+            },
+            {
+                "item" : "kitchenkarrot:empty_can"
+            },
+            {
+                "item" : "minecraft:seagrass"
+            },
+            {
+                "item" : "minecraft:string"
+            }
+        ],
+        "craftingtime":120,
+        "hunger":0,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:luck","lvl":1,"duration":4800}
+        ]
+    }
+}

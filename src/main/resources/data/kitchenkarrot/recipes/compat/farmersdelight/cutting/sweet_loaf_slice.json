@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "kitchenkarrot:sweet_loaf"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "kitchenkarrot:sweet_loaf_slice",
+      "count": 3
+    }
+  ]
+}

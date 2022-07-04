@@ -1,0 +1,10 @@
+{
+    "type": "kitchenkarrot:plate",
+    "item": {
+      "item": "kitchenkarrot:slime_mousse",
+      "maxCount": 1
+    },
+    "cut": {
+      "out": "kitchenkarrot:small_slime_mousse"
+    }
+  }

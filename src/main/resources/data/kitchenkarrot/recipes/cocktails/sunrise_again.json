@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"星宇",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:mead_base"
+            },
+            {
+                "item" : "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "minecraft:egg"
+            },
+            {
+                "item" : "minecraft:magma_cream"
+            }
+        ],
+        "craftingtime":160,
+        "hunger":2,
+        "saturation":4,
+        "effect":[
+            {"id":"minecraft:fire_resistance","lvl":1,"duration":12000}
+        ]
+    }
+}

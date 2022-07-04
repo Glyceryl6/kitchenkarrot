@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:bread"
+    },
+    {
+      "tag": "forge:salt"
+    },
+    {
+      "tag": "forge:cooking_oil"
+    },
+    {
+      "item": "kitchenkarrot:carrot_spices"
+    },
+    [
+      {
+        "tag": "forge:cooked_beef"
+      },
+      {
+        "tag": "forge:cooked_chicken"
+      },
+      {
+        "tag": "forge:cooked_pork"
+      }
+    ]
+  ],
+  "result": {
+    "item": "kitchenkarrot:chinese_crepe"
+  }
+}

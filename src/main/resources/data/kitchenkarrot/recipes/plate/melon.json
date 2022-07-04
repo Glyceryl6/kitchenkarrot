@@ -1,0 +1,10 @@
+{
+    "type": "kitchenkarrot:plate",
+    "item": {
+      "item": "minecraft:melon",
+      "maxCount": 1
+    },
+    "cut": {
+      "out": "minecraft:melon_slice"
+    }
+  }

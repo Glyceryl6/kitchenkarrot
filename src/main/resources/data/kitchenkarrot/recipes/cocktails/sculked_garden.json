@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "minecraft:redstone"
+            },
+            {
+                "item" : "minecraft:glowstone_dust"
+            }
+        ],
+        "craftingtime":140,
+        "hunger":0,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:absorption","lvl":2,"duration":12000}
+        ]
+    }
+}

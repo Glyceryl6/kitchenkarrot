@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.tt432.kitchenkarrot.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "kitchenkarrot.refmap.json",
+  "mixins": [
+    "MixinLivingEntity"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

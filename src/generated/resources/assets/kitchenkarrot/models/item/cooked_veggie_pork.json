@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "kitchenkarrot:item/cooked_veggie_pork"
+  }
+}

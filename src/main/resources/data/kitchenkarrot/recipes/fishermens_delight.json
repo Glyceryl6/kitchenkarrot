@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "123",
+    " 0 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:bowl"
+    },
+    "1": {
+      "item": "kitchenkarrot:birch_sap"
+    },
+    "2": {
+      "tag": "forge:cooked_fishes/salmon"
+    },
+    "3": {
+      "item": "minecraft:kelp"
+    }
+  },
+  "result": {
+    "item": "kitchenkarrot:fishermens_delight"
+  }
+}

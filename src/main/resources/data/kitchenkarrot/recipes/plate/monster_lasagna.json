@@ -1,0 +1,10 @@
+{
+    "type": "kitchenkarrot:plate",
+    "item": {
+      "item": "kitchenkarrot:monster_lasagna",
+      "maxCount": 1
+    },
+    "cut": {
+      "out": "kitchenkarrot:small_monster_lasagna"
+    }
+  }

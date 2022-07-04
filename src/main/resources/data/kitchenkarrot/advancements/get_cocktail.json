@@ -1,0 +1,37 @@
+{
+  "parent": "kitchenkarrot:drink_liquor",
+  "display": {
+    "icon": {
+      "item": "kitchenkarrot:shaker"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.get_cocktail.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.get_cocktail.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cocktail": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kitchenkarrot:cocktail"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cocktail"
+    ]
+  ]
+}

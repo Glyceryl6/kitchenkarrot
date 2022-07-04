@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "kitchenkarrot:chorus_mousse"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "kitchenkarrot:small_chorus_mousse",
+      "count": 4
+    }
+  ]
+}

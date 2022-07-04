@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"星宇",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:water"
+            },
+            {
+                "item": "kitchenkarrot:water"
+            },
+            {
+                "item" : "kitchenkarrot:water"
+            },
+            {
+                "item" : "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "kitchenkarrot:ice_cubes"
+            }
+        ],
+        "craftingtime":20,
+        "hunger":0,
+        "saturation":0,
+        "effect":[
+
+        ]
+    }
+}

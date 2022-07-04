@@ -1,0 +1,31 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"souiken",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:mead_base"
+            },
+            {
+                "item": "kitchenkarrot:mead_base"
+            },
+            {
+                "item" : "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "minecraft:ink_sac"
+            }
+        ],
+        "craftingtime":100,
+        "hunger":1,
+        "saturation":1,
+        "effect":[
+            {"id":"minecraft:mining_fatigue","lvl":3,"duration":600},
+            {"id":"minecraft:haste","lvl":3,"duration":600},
+            {"id":"minecraft:blindness","lvl":1,"duration":200}
+        ]
+    }
+}

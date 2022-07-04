@@ -1,0 +1,7 @@
+{
+  "type": "kitchenkarrot:plate",
+  "item": {
+    "item": "kitchenkarrot:fried_pumpkin_cake",
+    "maxCount": 5
+  }
+}

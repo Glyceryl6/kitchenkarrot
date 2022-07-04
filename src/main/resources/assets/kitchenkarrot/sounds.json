@@ -1,0 +1,44 @@
+{
+  "cocktail.shaker": {
+    "replace": false,
+    "subtitle": "kitchenkarrot.cocktail.shaker",
+    "sounds": [
+      "kitchenkarrot:cocktail/shaker"
+    ]
+  },
+  "cocktail.complete": {
+    "replace": false,
+    "subtitle": "kitchenkarrot.cocktail.complete",
+    "sounds": [
+      "kitchenkarrot:cocktail/cocktail_complete"
+    ]
+  },
+  "cocktail.chop": {
+    "replace": false,
+    "subtitle": "kitchenkarrot.cocktail.chop",
+    "sounds": [
+      "kitchenkarrot:cocktail/chop"
+    ]
+  },
+  "cocktail.shaker_close": {
+    "replace": false,
+    "subtitle": "kitchenkarrot.cocktail.shaker_close",
+    "sounds": [
+      "kitchenkarrot:cocktail/shaker_close"
+    ]
+  },
+  "cocktail.shaker_cocktail": {
+    "replace": false,
+    "subtitle": "kitchenkarrot.cocktail.shaker_cocktail",
+    "sounds": [
+      "kitchenkarrot:cocktail/shaker_cocktail"
+    ]
+  },
+  "cocktail.shaker_open": {
+    "replace": false,
+    "subtitle": "kitchenkarrot.cocktail.shaker_open",
+    "sounds": [
+      "kitchenkarrot:cocktail/shaker_open"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"kitchenkarrot",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:vodka_base"
+            },
+            {
+                "item" : "kitchenkarrot:birch_sap"
+            },
+            {
+                "item" : "minecraft:sugar"
+            },
+            {
+                "item" : "minecraft:sugar"
+            }
+        ],
+        "craftingtime":80,
+        "hunger":1,
+        "saturation":2,
+        "effect":[
+            {"id":"minecraft:regeneration","lvl":0,"duration":3000}
+        ]
+    }
+}

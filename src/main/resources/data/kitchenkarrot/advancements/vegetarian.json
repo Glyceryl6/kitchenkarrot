@@ -1,0 +1,94 @@
+{
+  "parent": "kitchenkarrot:get_gem_carrot",
+  "display": {
+    "icon": {
+      "item": "kitchenkarrot:cooked_veggie_pork"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.vegetarian.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.vegetarian.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 500
+  },
+  "criteria": {
+    "raw_beef": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:raw_veggie_beef"
+          ]
+        }
+      }
+    },
+    "raw_pork": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:raw_veggie_pork"
+          ]
+        }
+      }
+    },
+    "raw_rabbit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:raw_veggie_rabbit"
+          ]
+        }
+      }
+    },    
+    "cooked_beef": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:cooked_veggie_beef"
+          ]
+        }
+      }
+    },
+    "cooked_pork": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:cooked_veggie_pork"
+          ]
+        }
+      }
+    },
+    "cooked_rabbit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kitchenkarrot:cooked_veggie_rabbit"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "raw_beef","cooked_beef"
+    ],
+    [
+      "raw_pork","cooked_pork"
+    ],    
+    [
+      "raw_rabbit","cooked_rabbit"
+    ]
+  ]
+}

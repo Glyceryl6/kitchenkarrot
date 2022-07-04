@@ -1,0 +1,37 @@
+{
+  "parent": "kitchenkarrot:root",
+  "display": {
+    "icon": {
+      "item": "kitchenkarrot:acorn"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.get_acorn.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.get_acorn.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "acorn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kitchenkarrot:acorn"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "acorn"
+    ]
+  ]
+}

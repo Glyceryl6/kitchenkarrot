@@ -1,0 +1,31 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"佑希",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:acorn_wine_base"
+            },
+            {
+                "item": "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "minecraft:crying_obsidian"
+            },
+            {
+                "item" : "minecraft:netherite_scrap"
+            },
+            {
+                "item" : "minecraft:turtle_shell"
+            }
+        ],
+        "craftingtime":200,
+        "hunger":3,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:resistance","lvl":3,"duration":2400},
+            {"id":"minecraft:slowness","lvl":2,"duration":600},
+            {"id":"minecraft:weekness","lvl":2,"duration":600}
+        ]
+    }
+}

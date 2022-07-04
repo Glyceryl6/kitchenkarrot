@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"秦千久",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:mead_base"
+            },
+            {
+                "item": "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "kitchenkarrot:milk"
+            },
+            {
+                "item" : "kitchenkarrot:milk"
+            }
+        ],
+        "craftingtime":175,
+        "hunger":1,
+        "saturation":1,
+        "effect":[
+            {"id":"minecraft:invisibility","lvl":1,"duration":600},
+            {"id":"minecraft:saturation","lvl":1,"duration":1}
+        ]
+    }
+}

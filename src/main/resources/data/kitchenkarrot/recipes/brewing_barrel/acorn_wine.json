@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:brewing_barrel",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:acorn"
+            },
+            {
+                "item" : "kitchenkarrot:acorn"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "tag" : "forge:crops/wheat"
+            },
+            {
+                "tag" : "forge:crops/wheat"
+            }
+        ],
+        "craftingtime":6000
+    },
+    "result":{
+        "item":"kitchenkarrot:acorn_wine"
+    }
+
+}

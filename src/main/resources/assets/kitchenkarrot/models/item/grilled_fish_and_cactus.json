@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "kitchenkarrot:item/grilled_fish_and_cactus"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:pumpkin"
+    },
+    {
+      "item": "minecraft:pumpkin"
+    },
+    {
+      "tag": "forge:crops/wheat"
+    },
+    {
+      "tag": "forge:crops/wheat"
+    }
+  ],
+  "result": {
+    "item": "kitchenkarrot:raw_veggie_rabbit"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "sakura:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:salt"
+    },
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "fluid": {
+    "fluidTag": "forge:food_oil",
+    "amount": 125
+  },
+  "result": {
+    "item": "kitchenkarrot:fries"
+  },
+  "recipeTime": 200
+}

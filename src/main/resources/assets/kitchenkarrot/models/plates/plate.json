@@ -7,12 +7,12 @@
 	"elements": [
 		{
 			"from": [1, 1, 1],
-			"to": [15, 1, 15],
+			"to": [15, 2, 15],
 			"faces": {
-				"north": {"uv": [0, 0, 1, 1], "texture": "#missing"},
-				"east": {"uv": [0, 0, 1, 1], "texture": "#missing"},
-				"south": {"uv": [0, 0, 1, 1], "texture": "#missing"},
-				"west": {"uv": [0, 0, 1, 1], "texture": "#missing"},
+				"north": {"uv": [0, 7, 7, 7.5], "texture": "#0"},
+				"east": {"uv": [0, 7, 7, 7.5], "texture": "#0"},
+				"south": {"uv": [0, 7, 7, 7.5], "texture": "#0"},
+				"west": {"uv": [0, 7, 7, 7.5], "texture": "#0"},
 				"up": {"uv": [0, 0, 7, 7], "texture": "#0"},
 				"down": {"uv": [8, 0, 15, 7], "texture": "#0"}
 			}
@@ -65,5 +65,15 @@
 		"fixed": {
 			"rotation": [0, 180, 0]
 		}
-	}
+	},
+	"groups": [
+		{
+			"name": "plate",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"nbt": "{}",
+			"armAnimationEnabled": false,
+			"children": [0, 1]
+		}
+	]
 }

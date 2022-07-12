@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "kitchenkarrot:models/plates/leafy_fresh_chocolate",
-		"particle": "kitchenkarrot:models/plates/leafy_fresh_chocolate"
+		"0": "kitchenkarrot:models/plates/rice_cake",
+		"particle": "kitchenkarrot:models/plates/rice_cake"
 	},
 	"elements": [
 		{

@@ -16,7 +16,7 @@
                 "item" : "minecraft:netherite_scrap"
             },
             {
-                "item" : "minecraft:turtle_shell"
+                "item" : "minecraft:turtle_helmet"
             }
         ],
         "craftingtime":200,

@@ -15,5 +15,11 @@
   "result": {
     "item": "kitchenkarrot:drumstick"
   },
-  "recipeTime": 200
+  "recipeTime": 200,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "sakuramod"
+    }
+  ]
 }

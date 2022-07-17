@@ -16,5 +16,11 @@
       "count": 1
     }
   ],
-  "energy": 12800
+  "energy": 12800,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "thermal"
+    }
+  ]
 }

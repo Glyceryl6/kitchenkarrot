@@ -32,6 +32,9 @@ public class ModItems {
     public static final RegistryObject<Item> SWEET_LOAF = simple("sweet_loaf");
     public static final RegistryObject<Item> WATER = simple("water");
     public static final RegistryObject<Item> MILK = simple("milk");
+    public static final RegistryObject<Item> DUNGEON_PIZZA = simple("dungeon_pizza");
+    public static final RegistryObject<Item> FEAST_PIZZA = simple("feast_pizza");
+    public static final RegistryObject<Item> SHINY_PIZZA = simple("shiny_pizza");
 
     public static final RegistryObject<Item> ACORN = food("acorn", 2, 0.4F);
     public static final RegistryObject<Item> BIRCH_SAP = drink("birch_sap", 3, 2);

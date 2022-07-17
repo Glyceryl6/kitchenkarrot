@@ -13,5 +13,11 @@
       "item": "kitchenkarrot:shiny_pizza_slice",
       "count": 4
     }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
   ]
 }

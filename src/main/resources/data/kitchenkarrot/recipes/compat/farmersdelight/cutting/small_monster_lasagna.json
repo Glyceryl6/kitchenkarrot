@@ -13,5 +13,11 @@
       "item": "kitchenkarrot:small_monster_lasagna",
       "count": 4
     }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
   ]
 }

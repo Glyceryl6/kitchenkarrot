@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "kitchenkarrot:feast_pizza"
+      "item": "kitchenkarrot:slime_mousse"
     }
   ],
   "tool": {
@@ -10,7 +10,7 @@
   },
   "result": [
     {
-      "item": "kitchenkarrot:feast_pizza_slice",
+      "item": "kitchenkarrot:small_slime_mousse",
       "count": 4
     }
   ],

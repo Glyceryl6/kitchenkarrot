@@ -25,5 +25,11 @@
   ],
   "result": {
     "item": "kitchenkarrot:fried_chicken_combo"
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid":"locusazzurro_icaruswings"
+    }
+  ]
 }

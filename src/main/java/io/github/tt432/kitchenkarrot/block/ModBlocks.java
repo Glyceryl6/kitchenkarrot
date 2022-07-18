@@ -33,11 +33,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * @author DustW
  **/
+@ParametersAreNonnullByDefault
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Kitchenkarrot.MOD_ID);
@@ -63,11 +65,11 @@ public class ModBlocks {
 
                     pLevel.getBlockEntity(pPos).getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY).ifPresent(handler -> {
                         if (handler instanceof IFluidTank tank) {
-                            var item = pPlayer.getItemInHand(pHand);
-                            var remain = ItemStack.EMPTY;
+                            ItemStack item = pPlayer.getItemInHand(pHand);
+                            ItemStack remain = ItemStack.EMPTY;
 
                             if (item.getItem() == Items.WATER_BUCKET) {
-                                var water = new FluidStack(Fluids.WATER, 1000);
+                                FluidStack water = new FluidStack(Fluids.WATER, 1000);
 
                                 if (tank.fill(water, IFluidHandler.FluidAction.SIMULATE) == 1000) {
                                     changed.set(true);
@@ -78,7 +80,7 @@ public class ModBlocks {
                                     }
                                 }
                             } else if (item.getItem() == Items.POTION && PotionUtils.getAllEffects(item.getTag()).isEmpty()) {
-                                var water = new FluidStack(Fluids.WATER, 250);
+                                FluidStack water = new FluidStack(Fluids.WATER, 250);
 
                                 if (tank.fill(water, IFluidHandler.FluidAction.SIMULATE) == 250) {
                                     changed.set(true);
@@ -90,7 +92,7 @@ public class ModBlocks {
                                 }
                             }
                             else if (item.getItem() == ModItems.WATER.get()) {
-                                var water = new FluidStack(Fluids.WATER, 125);
+                                FluidStack water = new FluidStack(Fluids.WATER, 125);
 
                                 if (tank.fill(water, IFluidHandler.FluidAction.SIMULATE) == 125) {
                                     changed.set(true);
@@ -147,6 +149,7 @@ public class ModBlocks {
                 () -> new Block(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
                         .strength(2.0f, 2.0f)) {
                     @Override
+                    @SuppressWarnings("deprecation")
                     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
                         return OIL;
                     }
@@ -158,6 +161,7 @@ public class ModBlocks {
                 () -> new Block(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
                         .strength(2.0f, 2.0f)) {
                     @Override
+                    @SuppressWarnings("deprecation")
                     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
                         return SALT;
                     }

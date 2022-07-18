@@ -9,9 +9,11 @@ import io.github.tt432.kitchenkarrot.recipes.register.RecipeManager;
 import io.github.tt432.kitchenkarrot.sound.ModSoundEvents;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author DustW
@@ -21,6 +23,8 @@ public class Kitchenkarrot {
     public static final String MOD_ID = "kitchenkarrot";
 
     public static final CreativeModeTab MAIN_TAB = new CreativeModeTab(MOD_ID + ".main") {
+
+        @NotNull
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.CARROT_SPICES.get());
@@ -28,6 +32,8 @@ public class Kitchenkarrot {
     };
 
     public static final CreativeModeTab COCKTAIL_TAB = new CreativeModeTab(MOD_ID + ".cocktail") {
+
+        @NotNull
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.SHAKER.get());
@@ -42,7 +48,7 @@ public class Kitchenkarrot {
         neapolitanLoaded = ModList.get().isLoaded("neapolitan");
 
 
-        var bus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
         ModMenuTypes.MENUS.register(bus);

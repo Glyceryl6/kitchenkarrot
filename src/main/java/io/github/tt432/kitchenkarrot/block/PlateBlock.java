@@ -7,6 +7,7 @@ import io.github.tt432.kitchenkarrot.recipes.register.RecipeTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -103,9 +104,9 @@ public class PlateBlock extends FacingEntityBlock<PlateBlockEntity> {
         if (recipe.isEmpty()) {
             var item = handler.extractItem(0, 64, false);
 
-            if (!pPlayer.addItem(item)) {
-                pPlayer.drop(item, true);
-            }
+            //捡物品时优先堆叠，满了以后掉落至玩家坐标附近
+            ItemEntity itemEntity = new ItemEntity(pLevel,pPlayer.getX(),pPlayer.getY(),pPlayer.getZ(),item);
+            pLevel.addFreshEntity(itemEntity);
 
             result.set(true);
         }

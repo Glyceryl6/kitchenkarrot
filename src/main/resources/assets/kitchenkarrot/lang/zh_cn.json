@@ -90,7 +90,6 @@
     "block.kitchenkarrot.air_compressor":"空气压缩机",
     "block.kitchenkarrot.brewing_barrel":"酿造桶",
     "block.kitchenkarrot.coaster":"杯垫",
-    "block.kitchenkarrot.plate":"盘子",
 
     "itemGroup.kitchenkarrot.cocktail":"胡萝卜厨房-鸡尾酒",
     "item.kitchenkarrot.shaker":"摇酒壶",
@@ -98,6 +97,7 @@
     "item.kitchenkarrot.vodka_base":"伏特加基酒",
     "item.kitchenkarrot.acorn_wine_base":"橡子酒基酒",
     "item.kitchenkarrot.mead_base":"蜜酒基酒",
+    "item.kitchenkarrot.plate_item":"盘子",
 
     "kitchenkarrot.unknown":"不知名鸡尾酒",
     "kitchenkarrot.unknown.tooltip":"§7新奇的研发。效果不明",

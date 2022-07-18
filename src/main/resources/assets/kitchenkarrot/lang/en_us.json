@@ -90,7 +90,6 @@
     "block.kitchenkarrot.air_compressor":"Air Compressor",
     "block.kitchenkarrot.brewing_barrel":"Brewing Barrel",
     "block.kitchenkarrot.coaster":"Coaster",
-    "block.kitchenkarrot.plate":"Plate",
     
     "itemGroup.kitchenkarrot.cocktail":"Kitchen Karrot-Cocktail",
     "item.kitchenkarrot.shaker":"Shaker",
@@ -98,6 +97,7 @@
     "item.kitchenkarrot.vodka_base":"Vodka Base",
     "item.kitchenkarrot.acorn_wine_base":"Acorn Wine Base",
     "item.kitchenkarrot.mead_base":"Mead Base",
+    "item.kitchenkarrot.plate_item":"Plate",
 
     "kitchenkarrot.unknown":"Unknown Cocktail",
     "kitchenkarrot.unknown.tooltip":"Creative work.Uncertain effect.",

@@ -1,0 +1,31 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"Chillir",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:mead_base"
+            },
+            {
+                "item": "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            },
+            {
+                "item" : "minecraft:apple"
+            },
+            {
+                "item" : "minecraft:sweet_berries"
+            }
+        ],
+        "craftingtime":200,
+        "hunger":0,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:regeneration","lvl":5,"duration":100},
+            {"id":"minecraft:weakness","lvl":1,"duration":100}
+        ]
+    }
+
+}

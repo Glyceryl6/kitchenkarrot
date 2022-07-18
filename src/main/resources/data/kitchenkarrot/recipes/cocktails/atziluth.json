@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"LimonBlaze",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:cupcake"
+            },
+            {
+                "tag": "kitchenkarrot:fire_charges"
+            },
+            {
+                "item" : "minecraft:magma_cream"
+            },
+            {
+                "item" : "emberphoenix:blaze_ruby"
+            },
+            {
+                "item" : "minecraft:blaze_powder"
+            }
+        ],
+        "craftingtime":140,
+        "hunger":1,
+        "saturation":1,
+        "effect":[
+            {"id":"minecraft:fire_resistance","lvl":1,"duration":200}
+        ]
+    }
+}

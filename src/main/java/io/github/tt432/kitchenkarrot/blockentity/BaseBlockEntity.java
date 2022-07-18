@@ -26,7 +26,9 @@ public abstract class BaseBlockEntity extends BlockEntity {
         syncDataInit(syncDataManager);
     }
 
-    /** 如果你有一些需要自动同步的内容，请放到这里面 */
+    /**
+     * 如果你有一些需要自动同步的内容，请放到这里面
+     */
     protected void syncDataInit(SyncDataManager manager) {
 
     }
@@ -67,11 +69,8 @@ public abstract class BaseBlockEntity extends BlockEntity {
     public CompoundTag getUpdateTag() {
         CompoundTag result = new CompoundTag();
         result.putBoolean(SYNC_KEY, true);
-        syncDataManager.save(result, true, forceOnce);
-
-        if (forceOnce) {
-            forceOnce = false;
-        }
+        //每tick都进行一次同步 by:skyinr
+        syncDataManager.save(result, true, true);
 
         return result;
     }
@@ -81,7 +80,7 @@ public abstract class BaseBlockEntity extends BlockEntity {
     public void sync(Level level) {
         if (!level.isClientSide) {
             ClientboundBlockEntityDataPacket p = ClientboundBlockEntityDataPacket.create(this);
-            ((ServerLevel)this.level).getChunkSource().chunkMap.getPlayers(new ChunkPos(getBlockPos()), false)
+            ((ServerLevel) this.level).getChunkSource().chunkMap.getPlayers(new ChunkPos(getBlockPos()), false)
                     .forEach(k -> k.connection.send(p));
         }
     }

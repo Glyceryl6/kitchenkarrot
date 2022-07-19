@@ -28,7 +28,6 @@ public class ModItems {
     public static final RegistryObject<Item> ACORN_OIL = block("acorn_oil", ModBlocks.ACORN_OIL);
     public static final RegistryObject<Item> CHORUS_OIL = block("chorus_oil", ModBlocks.CHORUS_OIL);
 
-
     public static final RegistryObject<Item> ICE_CUBES = simple("ice_cubes");
     public static final RegistryObject<Item> CARROT_SPICES = simple("carrot_spices");
     public static final RegistryObject<Item> EMPTY_CAN = simple("empty_can");
@@ -189,22 +188,21 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> COCKTAIL = ITEMS.register("cocktail",
-            () -> new CocktailItem(defaultProperties().food(
-                    new FoodProperties.Builder().alwaysEat().build()
-            )));
+            () -> new CocktailItem(defaultProperties().food(new FoodProperties.Builder().alwaysEat().build())));
 
     public static final RegistryObject<Item> SHAKER = ITEMS.register("shaker",
             () -> new ShakerItem(defaultProperties().tab(Kitchenkarrot.COCKTAIL_TAB).stacksTo(1)));
 
     public static final RegistryObject<Item> RUM_BASE = cocktail("rum_base");
+    public static final RegistryObject<Item> MEAD_BASE = cocktail("mead_base");
     public static final RegistryObject<Item> VODKA_BASE = cocktail("vodka_base");
     public static final RegistryObject<Item> ACORN_WINE_BASE = cocktail("acorn_wine_base");
-    public static final RegistryObject<Item> MEAD_BASE = cocktail("mead_base");
 
     public static final RegistryObject<Item> COASTER = block("coaster", ModBlocks.COASTER);
     public static final RegistryObject<Item> AIR_COMPRESSOR = block("air_compressor", ModBlocks.AIR_COMPRESSOR);
     public static final RegistryObject<Item> BREWING_BARREL = block("brewing_barrel", ModBlocks.BREWING_BARREL);
-    public static final RegistryObject<Item> PLATE = ITEMS.register("plate_item", () -> new ItemNameBlockItem(ModBlocks.PLATE.get(), defaultProperties()));
+    public static final RegistryObject<Item> EMPTY_PLATE = ITEMS.register("plate_item", () -> new PlateItem(defaultProperties()));
+    public static final RegistryObject<Item> FOOD_FILLED_PLATE = ITEMS.register("plate", () -> new PlateBlockItem(ModBlocks.PLATE.get(), new Item.Properties()));
 
     static {
         if (Kitchenkarrot.farmersdelightLoaded) {
@@ -263,17 +261,11 @@ public class ModItems {
     }
 
     public static RegistryObject<Item> foodEffectRemain(String name, int nutrition, float saturation, Item remain, EffectEntry... list) {
-        return ITEMS.register(name, () -> new EatFastItem(
-                defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)),
-                32,
-                new ItemStack(remain)));
+        return ITEMS.register(name, () -> new EatFastItem(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)), 32, new ItemStack(remain)));
     }
 
     private static RegistryObject<Item> drinkEffectRemain(String name, int nutrition, float saturation, Item remain, EffectEntry... list) {
-        return ITEMS.register(name, () -> new EatFastItem(
-                defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)),
-                32,
-                new ItemStack(remain)) {
+        return ITEMS.register(name, () -> new EatFastItem(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)), 32, new ItemStack(remain)) {
             @Override
             public UseAnim getUseAnimation(ItemStack pStack) {
                 return UseAnim.DRINK;

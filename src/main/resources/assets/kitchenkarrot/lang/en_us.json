@@ -90,6 +90,7 @@
     "block.kitchenkarrot.air_compressor":"Air Compressor",
     "block.kitchenkarrot.brewing_barrel":"Brewing Barrel",
     "block.kitchenkarrot.coaster":"Coaster",
+    "block.kitchenkarrot.plate":"Empty Plate",
     
     "itemGroup.kitchenkarrot.cocktail":"Kitchen Karrot-Cocktail",
     "item.kitchenkarrot.shaker":"Shaker",
@@ -98,6 +99,13 @@
     "item.kitchenkarrot.acorn_wine_base":"Acorn Wine Base",
     "item.kitchenkarrot.mead_base":"Mead Base",
     "item.kitchenkarrot.plate_item":"Plate",
+
+    "info.kitchenkarrot.dished":"Dished %s",
+    "info.kitchenkarrot.text1":"§7Right click plate with food to put the food on plate.",
+    "info.kitchenkarrot.text2":"§7Right click with empty hand to take out the food on plate.",
+    "info.kitchenkarrot.text3":"§7Right click and press shift to porting the dished food",
+    "info.kitchenkarrot.text4":"§dPress §r§e[SHIFT] §r§dto view all foods which can put on the plate.",
+    "info.kitchenkarrot.text5":"§eThe food of the following can put on the plate: ",
 
     "kitchenkarrot.unknown":"Unknown Cocktail",
     "kitchenkarrot.unknown.tooltip":"Creative work.Uncertain effect.",

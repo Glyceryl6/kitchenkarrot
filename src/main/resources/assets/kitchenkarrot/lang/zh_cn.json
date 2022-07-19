@@ -90,6 +90,7 @@
     "block.kitchenkarrot.air_compressor":"空气压缩机",
     "block.kitchenkarrot.brewing_barrel":"酿造桶",
     "block.kitchenkarrot.coaster":"杯垫",
+    "block.kitchenkarrot.plate":"空盘子",
 
     "itemGroup.kitchenkarrot.cocktail":"胡萝卜厨房-鸡尾酒",
     "item.kitchenkarrot.shaker":"摇酒壶",
@@ -98,6 +99,13 @@
     "item.kitchenkarrot.acorn_wine_base":"橡子酒基酒",
     "item.kitchenkarrot.mead_base":"蜜酒基酒",
     "item.kitchenkarrot.plate_item":"盘子",
+
+    "info.kitchenkarrot.dished":"盘装的%s",
+    "info.kitchenkarrot.text1":"§7手持食物时右键将食物放在盘子上",
+    "info.kitchenkarrot.text2":"§7空手右键拿起拿出盘子中的食物",
+    "info.kitchenkarrot.text3":"§7SHIFT+右键端起盘子",
+    "info.kitchenkarrot.text4":"§d按住 §r§e[SHIFT] §r§d查看所有可以放置的食物",
+    "info.kitchenkarrot.text5":"§e以下这些食物可以装入盘子中：",
 
     "kitchenkarrot.unknown":"不知名鸡尾酒",
     "kitchenkarrot.unknown.tooltip":"§7新奇的研发。效果不明",

@@ -180,8 +180,6 @@ dependencies {
 
     implementation fg.deobf("mezz.jei:jei-1.18.2-forge:10.0.0.191")
     implementation fg.deobf("curse.maven:farmerdelight-398521:3834150")
-    implementation fg.deobf("curse.maven:mmlib-368098:3857113")
-    implementation fg.deobf("curse.maven:sakura-333079:3848630")
     implementation fg.deobf("curse.maven:icarus-575424:3807882")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'

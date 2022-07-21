@@ -5,7 +5,7 @@
       "tag": "forge:milk"
     },
     {
-      "tag": "forge:bread"
+      "item": "minecraft:bread"
     },
     {
       "item": "minecraft:cocoa_beans"

@@ -1,0 +1,29 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"夜枭",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:vodka_base"
+            },
+            {
+                "item" : "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "minecraft:bread"
+            },
+            {
+                "item" : "minecraft:sugar"
+            }
+        ],
+        "craftingtime":120,
+        "hunger":3,
+        "saturation":2,
+        "effect":[
+            {"id":"minecraft:instant_health","lvl":2,"duration":2}
+        ]
+    }
+}

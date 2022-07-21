@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"CC2001",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "minecraft:raw_copper"
+            },
+            {
+                "item" : "minecraft:raw_iron"
+            },
+            {
+                "item" : "minecraft:raw_gold"
+            },
+            {
+                "item" : "kitchenkarrot:carrot_spices"
+            }
+        ],
+        "craftingtime":240,
+        "hunger":0,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:haste","lvl":1,"duration":12000},
+            {"id":"minecraft:night_vision","lvl":1,"duration":12000}
+                ]
+    }
+}

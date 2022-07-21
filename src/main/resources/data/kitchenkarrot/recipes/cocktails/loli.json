@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"萝莉昂",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:mead_base"
+            },
+            {
+                "item": "kitchenkarrot:mead_base"
+            },
+            {
+                "item" : "minecraft:red_dye"
+            },
+            {
+                "item" : "minecraft:pink_dye"
+            },
+            {
+                "item" : "minecraft:magenta_dye"
+            }
+        ],
+        "craftingtime":40,
+        "hunger":4,
+        "saturation":0,
+        "effect":[
+            {"id":"minecraft:levitation","lvl":50,"duration":20},
+            {"id":"minecraft:jump_boost","lvl":255,"duration":180}
+        ]
+    }
+}

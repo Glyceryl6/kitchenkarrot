@@ -20,25 +20,30 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Kitchenkarrot.MOD_ID);
-
-    public static final RegistryObject<Item> ROCK_SALT = block("rock_salt", ModBlocks.ROCK_SALT);
-    public static final RegistryObject<Item> SEA_SALT = block("sea_salt", ModBlocks.SEA_SALT);
-    public static final RegistryObject<Item> FINE_SALT = block("fine_salt", ModBlocks.FINE_SALT);
+    //餐具和调料
+    public static final RegistryObject<Item> EMPTY_PLATE = ITEMS.register("plate_item", () -> new PlateItem(defaultProperties()));
+    public static final RegistryObject<Item> FOOD_FILLED_PLATE = ITEMS.register("plate", () -> new PlateBlockItem(ModBlocks.PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AIR_COMPRESSOR = block("air_compressor", ModBlocks.AIR_COMPRESSOR);
+    public static final RegistryObject<Item> BREWING_BARREL = block("brewing_barrel", ModBlocks.BREWING_BARREL);
     public static final RegistryObject<Item> SUNFLOWER_OIL = block("sunflower_oil", ModBlocks.SUNFLOWER_OIL);
-    public static final RegistryObject<Item> ACORN_OIL = block("acorn_oil", ModBlocks.ACORN_OIL);
     public static final RegistryObject<Item> CHORUS_OIL = block("chorus_oil", ModBlocks.CHORUS_OIL);
-
-    public static final RegistryObject<Item> ICE_CUBES = simple("ice_cubes");
-    public static final RegistryObject<Item> CARROT_SPICES = simple("carrot_spices");
-    public static final RegistryObject<Item> EMPTY_CAN = simple("empty_can");
-    public static final RegistryObject<Item> RAW_SWEET_LOAF = simple("raw_sweet_loaf");
-    public static final RegistryObject<Item> SWEET_LOAF = simple("sweet_loaf");
+    public static final RegistryObject<Item> ACORN_OIL = block("acorn_oil", ModBlocks.ACORN_OIL);
+    public static final RegistryObject<Item> ROCK_SALT = block("rock_salt", ModBlocks.ROCK_SALT);
+    public static final RegistryObject<Item> FINE_SALT = block("fine_salt", ModBlocks.FINE_SALT);
+    public static final RegistryObject<Item> SEA_SALT = block("sea_salt", ModBlocks.SEA_SALT);
+    public static final RegistryObject<Item> COASTER = block("coaster", ModBlocks.COASTER);
+    //基本食材
     public static final RegistryObject<Item> WATER = simple("water");
     public static final RegistryObject<Item> MILK = simple("milk");
+    public static final RegistryObject<Item> EMPTY_CAN = simple("empty_can");
+    public static final RegistryObject<Item> ICE_CUBES = simple("ice_cubes");
+    public static final RegistryObject<Item> CARROT_SPICES = simple("carrot_spices");
+    public static final RegistryObject<Item> RAW_SWEET_LOAF = simple("raw_sweet_loaf");
+    public static final RegistryObject<Item> SWEET_LOAF = simple("sweet_loaf");
     public static final RegistryObject<Item> DUNGEON_PIZZA = simple("dungeon_pizza");
     public static final RegistryObject<Item> FEAST_PIZZA = simple("feast_pizza");
     public static final RegistryObject<Item> SHINY_PIZZA = simple("shiny_pizza");
-
+    //普通食物
     public static final RegistryObject<Item> ACORN = food("acorn", 2, 0.4F);
     public static final RegistryObject<Item> BIRCH_SAP = drink("birch_sap", 3, 2);
     public static final RegistryObject<Item> GEM_CARROT = food("gem_carrot", 6, 8);
@@ -72,17 +77,17 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_VEGGIE_RABBIT = food("raw_veggie_rabbit", 2, 1.2F);
     public static final RegistryObject<Item> COOKED_VEGGIE_RABBIT = food("cooked_veggie_rabbit", 6, 7.2F);
     public static final RegistryObject<Item> CURRY_UDON = food("curry_udon", 10, 14.4F);
-
-    public static final RegistryObject<Item> FRIED_PUMPKIN_CAKE = fastFood("fried_pumpkin_cake", 4, 3.2F, 24);
+    //罐头类食物
     public static final RegistryObject<Item> SEED_PIE = fastFood("seed_pie", 4, 2.4F, 24);
-    public static final RegistryObject<Item> KELP_WITH_SUNFLOWER_SEED = fastFood("kelp_with_sunflower_seed", 2, 1, 12);
     public static final RegistryObject<Item> RICE_CAKE = fastFood("rice_cake", 4, 4, 18);
     public static final RegistryObject<Item> CUPCAKE = fastFood("cupcake", 2, 3.2F, 24);
+    public static final RegistryObject<Item> FRIED_PUMPKIN_CAKE = fastFood("fried_pumpkin_cake", 4, 3.2F, 24);
+    public static final RegistryObject<Item> KELP_WITH_SUNFLOWER_SEED = fastFood("kelp_with_sunflower_seed", 2, 1, 12);
     public static final RegistryObject<Item> LEAFY_FRESH_CHOCOLATE = fastFood("leafy_fresh_chocolate", 2, 4.8F, 18);
-    public static final RegistryObject<Item> CANNED_BEEF_POTATO = fastFood("canned_beef_potato", 8, 12.8F, 1);
-    public static final RegistryObject<Item> CANNED_PORK_BEETROOT = fastFood("canned_pork_beetroot", 8, 12.8F, 1);
     public static final RegistryObject<Item> CANNED_RABBIT_PUMPKIN = fastFood("canned_rabbit_pumpkin", 8, 12.8F, 1);
+    public static final RegistryObject<Item> CANNED_PORK_BEETROOT = fastFood("canned_pork_beetroot", 8, 12.8F, 1);
     public static final RegistryObject<Item> CANNED_CANDIED_APPLE = fastFood("canned_candied_apple", 6, 14.4F, 1);
+    public static final RegistryObject<Item> CANNED_BEEF_POTATO = fastFood("canned_beef_potato", 8, 12.8F, 1);
 
     public static final RegistryObject<Item> GRILLED_FISH_AND_CACTUS =
             food("grilled_fish_and_cactus", 8, 0.8F);
@@ -197,12 +202,6 @@ public class ModItems {
     public static final RegistryObject<Item> MEAD_BASE = cocktail("mead_base");
     public static final RegistryObject<Item> VODKA_BASE = cocktail("vodka_base");
     public static final RegistryObject<Item> ACORN_WINE_BASE = cocktail("acorn_wine_base");
-
-    public static final RegistryObject<Item> COASTER = block("coaster", ModBlocks.COASTER);
-    public static final RegistryObject<Item> AIR_COMPRESSOR = block("air_compressor", ModBlocks.AIR_COMPRESSOR);
-    public static final RegistryObject<Item> BREWING_BARREL = block("brewing_barrel", ModBlocks.BREWING_BARREL);
-    public static final RegistryObject<Item> EMPTY_PLATE = ITEMS.register("plate_item", () -> new PlateItem(defaultProperties()));
-    public static final RegistryObject<Item> FOOD_FILLED_PLATE = ITEMS.register("plate", () -> new PlateBlockItem(ModBlocks.PLATE.get(), new Item.Properties()));
 
     static {
         if (Kitchenkarrot.farmersdelightLoaded) {

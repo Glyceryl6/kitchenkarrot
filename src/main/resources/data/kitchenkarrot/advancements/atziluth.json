@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "atziluth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kitchenkarrot:cocktail"
+            ],
+            "nbt": "{cocktail:\"kitchenkarrot:cocktails/atziluth\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "atziluth"
+    ]
+  ],
+  "rewards": {
+    "function": "kitchenkarrot:atziluth"
+  }
+}

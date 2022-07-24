@@ -20,7 +20,7 @@
             }
         ],
         "craftingtime":200,
-        "hunger":3,
+        "hunger":0,
         "saturation":0,
         "effect":[
             {"id":"minecraft:resistance","lvl":3,"duration":2400},

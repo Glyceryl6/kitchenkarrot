@@ -31,10 +31,10 @@ displayName = "Kitchenkarrot" #mandatory
 # A text field displayed in the mod UI
 #credits="Thanks for this example mod goes to Java" #optional
 # A text field displayed in the mod UI
-authors = "DustW" #optional
+authors = "Zoshsgahdnkc,Glyceryl6,DustW" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description = '''
-
+An Energetic Food Expansion-Fast Food,Dessert,Soft Drinks,Alcohol and more.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.kitchenkarrot]] #optional

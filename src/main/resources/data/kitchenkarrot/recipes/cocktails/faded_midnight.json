@@ -1,0 +1,30 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author":"idyllic_bean",
+    "content":{
+        "recipe":[
+            {
+                "item" : "kitchenkarrot:mead_base"
+            },
+            {
+                "item": "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item" : "minecraft:golden_carrot"
+            },
+            {
+                "item" : "minecraft:snowball"
+            },
+            {
+                "item" : "kitchenkarrot:leafy_fresh_chocolate"
+            }
+        ],
+        "craftingtime":80,
+        "hunger":2,
+        "saturation":0.5,
+        "effect":[
+            {"id":"minecraft:night_vision","lvl":1,"duration":7200},
+            {"id":"minecraft:regeneration","lvl":1,"duration":340}
+        ]
+    }
+}

@@ -24,7 +24,7 @@
         "saturation":0,
         "effect":[
             {"id":"minecraft:speed","lvl":2,"duration":6000},
-            {"id":"minecraft:regenaration","lvl":1,"duration":2400},
+            {"id":"minecraft:regeneration","lvl":1,"duration":2400},
             {"id":"minecraft:wither","lvl":1,"duration":200}
         ]
     }

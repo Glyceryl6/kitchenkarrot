@@ -25,7 +25,7 @@
         "effect":[
             {"id":"minecraft:resistance","lvl":3,"duration":2400},
             {"id":"minecraft:slowness","lvl":2,"duration":600},
-            {"id":"minecraft:weekness","lvl":2,"duration":600}
+            {"id":"minecraft:weakness","lvl":2,"duration":600}
         ]
     }
 }

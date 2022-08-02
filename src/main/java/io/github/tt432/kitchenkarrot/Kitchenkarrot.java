@@ -2,6 +2,7 @@ package io.github.tt432.kitchenkarrot;
 
 import io.github.tt432.kitchenkarrot.block.ModBlocks;
 import io.github.tt432.kitchenkarrot.blockentity.ModBlockEntities;
+import io.github.tt432.kitchenkarrot.entity.ModEntitys;
 import io.github.tt432.kitchenkarrot.menu.reg.ModMenuTypes;
 import io.github.tt432.kitchenkarrot.item.ModItems;
 import io.github.tt432.kitchenkarrot.net.ModNetManager;
@@ -54,6 +55,7 @@ public class Kitchenkarrot {
         ModMenuTypes.MENUS.register(bus);
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
         ModSoundEvents.SOUNDS.register(bus);
+        ModEntitys.ENTITYS.register(bus);
 
         RecipeManager.register(bus);
         ModNetManager.register();

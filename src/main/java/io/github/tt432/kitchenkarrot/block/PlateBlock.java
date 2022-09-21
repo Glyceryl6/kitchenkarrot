@@ -13,6 +13,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -21,6 +22,9 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import org.jetbrains.annotations.NotNull;
@@ -37,6 +41,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @SuppressWarnings("deprecation")
 @ParametersAreNonnullByDefault
 public class PlateBlock extends FacingEntityBlock<PlateBlockEntity> {
+    static {
+        var part1 = Block.box(1, 1, 1, 16 - 1, 2, 16 - 1);
+        var part2 = Block.box(3, 0, 3, 16 - 3, 1, 16 - 3);
+        SHAPE = Shapes.or(part1, part2);
+    }
+
+    public static final VoxelShape SHAPE;
 
     public PlateBlock(Properties properties) {
         super(properties);
@@ -45,6 +56,11 @@ public class PlateBlock extends FacingEntityBlock<PlateBlockEntity> {
     @Override
     public BlockEntityType<PlateBlockEntity> getBlockEntity() {
         return ModBlockEntities.PLATE.get();
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return SHAPE;
     }
 
     @Override

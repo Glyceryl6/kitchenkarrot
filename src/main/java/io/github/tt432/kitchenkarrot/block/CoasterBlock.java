@@ -7,10 +7,15 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.CapabilityItemHandler;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -19,8 +24,24 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * @author DustW
  **/
 public class CoasterBlock extends FacingEntityBlock<CoasterBlockEntity> {
+    static {
+        var part1 = Block.box(4, 0, 3, 4 + 2, 1, 16 - 3);
+        var part2 = Block.box(3, 0, 4, 16 - 3, 1, 4 + 2);
+        var part3 = Block.box(16 - 4 - 2, 0, 3, 16 - 4, 1, 16 - 3);
+        var part4 = Block.box(3, 0, 16 - 4 - 2, 16 - 3, 1, 16 - 4);
+
+        SHAPE = Shapes.or(part1, part2, part3, part4);
+    }
+
+    public static final VoxelShape SHAPE;
+
     public CoasterBlock(Properties p_49795_) {
         super(p_49795_);
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return SHAPE;
     }
 
     @Override

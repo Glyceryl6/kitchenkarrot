@@ -39,7 +39,7 @@ public class CocktailItem extends Item {
 
     @Override
     public void fillItemCategory(CreativeModeTab p_41391_, NonNullList<ItemStack> itemStackNonNullList) {
-        if (p_41391_ == Kitchenkarrot.COCKTAIL_TAB) {
+        if (p_41391_ == ModItems.COCKTAIL_TAB) {
             for (String cocktail : CocktailList.INSTANCE.cocktails) {
                 ItemStack stack = new ItemStack(this);
                 setCocktail(stack, new ResourceLocation(cocktail));

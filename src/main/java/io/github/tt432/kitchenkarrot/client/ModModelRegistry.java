@@ -21,7 +21,7 @@ import net.minecraftforge.fml.common.Mod;
 /**
  * @author DustW
  **/
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT,modid = Kitchenkarrot.MOD_ID)
 public class ModModelRegistry {
     public static void render(BakedModel bakedModel, MultiBufferSource bufferSource, BlockEntity blockEntity,
                               PoseStack poseStack, int packedLight, int packedOverlay) {

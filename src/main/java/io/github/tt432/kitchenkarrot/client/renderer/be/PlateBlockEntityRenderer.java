@@ -21,6 +21,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  **/
 public class PlateBlockEntityRenderer implements BlockEntityRenderer<PlateBlockEntity> {
 
+    //TODO 重写渲染系统
     @Override
     @ParametersAreNonnullByDefault
     public void render(PlateBlockEntity pBlockEntity, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay) {

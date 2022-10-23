@@ -5,15 +5,17 @@ import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @author DustW
@@ -49,9 +51,8 @@ public class PlateBakedModel implements BakedModel {
         return null;
     }
 
-    static Map<ModelResourceLocation, BakedModel> cache = new HashMap<>();
-
     @Override
+    @NotNull
     public ItemOverrides getOverrides() {
         return new ItemOverrides() {
             @Nullable

@@ -26,6 +26,8 @@ public class ModItems {
     //table sets
     public static final RegistryObject<Item> EMPTY_PLATE = ITEMS.register("plate_item", () -> new PlateItem(defaultProperties()));
     public static final RegistryObject<Item> FOOD_FILLED_PLATE = ITEMS.register("plate", () -> new PlateBlockItem(ModBlocks.PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PLATE_PIECES = ITEMS.register("plate_pieces", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> KNIFE = ITEMS.register("knife", () -> new KnifeItem(defaultProperties()));
     public static final RegistryObject<Item> AIR_COMPRESSOR = block("air_compressor", ModBlocks.AIR_COMPRESSOR);
     public static final RegistryObject<Item> BREWING_BARREL = block("brewing_barrel", ModBlocks.BREWING_BARREL);
     public static final RegistryObject<Item> COASTER = block("coaster", ModBlocks.COASTER);

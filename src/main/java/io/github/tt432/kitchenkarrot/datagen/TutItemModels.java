@@ -1,5 +1,7 @@
 package io.github.tt432.kitchenkarrot.datagen;
 
+import io.github.tt432.kitchenkarrot.block.PlateBlock;
+import io.github.tt432.kitchenkarrot.item.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -25,9 +27,10 @@ public class TutItemModels extends ItemModelProvider {
         ForgeRegistries.ITEMS.forEach(item -> {
             if (item.getRegistryName().getNamespace().equals(DataGenerators.MOD_ID)) {
                 if (item instanceof BlockItem) {
+                    if (item == ModItems.FOOD_FILLED_PLATE.get())
+                        return;
                     withExistingParent(item.getRegistryName().getPath(), modLoc("block/" + item.getRegistryName().getPath()));
-                }
-                else {
+                } else {
                     simpleTexture(() -> item);
                 }
             }
@@ -43,7 +46,7 @@ public class TutItemModels extends ItemModelProvider {
             if (existingFileHelper.exists(texture, ModelProvider.TEXTURE)) {
                 singleTexture(name, mcLoc("item/generated"), "layer0", texture);
             }
+        } catch (Exception ignored) {
         }
-        catch (Exception ignored) {}
     }
 }

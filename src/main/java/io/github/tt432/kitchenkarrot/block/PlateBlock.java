@@ -2,6 +2,7 @@ package io.github.tt432.kitchenkarrot.block;
 
 import io.github.tt432.kitchenkarrot.blockentity.ModBlockEntities;
 import io.github.tt432.kitchenkarrot.blockentity.PlateBlockEntity;
+import io.github.tt432.kitchenkarrot.item.ModItems;
 import io.github.tt432.kitchenkarrot.recipes.recipe.PlateRecipe;
 import io.github.tt432.kitchenkarrot.recipes.register.RecipeTypes;
 import net.minecraft.core.BlockPos;
@@ -94,6 +95,9 @@ public class PlateBlock extends FacingEntityBlock<PlateBlockEntity> {
                         }
                         player.setItemInHand(hand, stack);
                         level.setBlock(pos, Blocks.AIR.defaultBlockState(), Block.UPDATE_ALL_IMMEDIATE);
+                    }
+                    if (heldItem.getItem() == ModItems.KNIFE.get()){
+                        //切剁配方
                     }
                 } else {
                     boolean isEmpty = input.isEmpty();

@@ -14,7 +14,7 @@ public class ModSoundEvents {
     public static final DeferredRegister<SoundEvent> SOUNDS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Kitchenkarrot.MOD_ID);
 
-    public static final RegistryObject<SoundEvent> CHOP = register("cocktail.chop");
+    public static final RegistryObject<SoundEvent> CHOP = register("chop");
     public static final RegistryObject<SoundEvent> SHAKER_CLOSE = register("cocktail.shaker_close");
     public static final RegistryObject<SoundEvent> SHAKER_COCKTAIL = register("cocktail.shaker_cocktail");
     public static final RegistryObject<SoundEvent> SHAKER_OPEN = register("cocktail.shaker_open");

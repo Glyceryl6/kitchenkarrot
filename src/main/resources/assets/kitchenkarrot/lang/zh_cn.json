@@ -1,10 +1,12 @@
 {
+    "kitchenkarrot.chop": "切菜",
     "itemGroup.kitchenkarrot.main":"胡萝卜厨房",
     "item.kitchenkarrot.water":"水",
     "item.kitchenkarrot.milk":"牛奶",
     "item.kitchenkarrot.ice_cubes":"冰块",
     "item.kitchenkarrot.carrot_spices":"胡萝卜香料",
     "item.kitchenkarrot.empty_can":"空罐头",
+    "item.kitchenkarrot.knife": "餐刀",
     "item.kitchenkarrot.raw_sweet_loaf":"生糖霜面包",
     "item.kitchenkarrot.sweet_loaf":"糖霜面包",
     "item.kitchenkarrot.acorn":"橡果",
@@ -118,6 +120,7 @@
     "item.kitchenkarrot.acorn_wine_base":"橡子酒基酒",
     "item.kitchenkarrot.mead_base":"蜜酒基酒",
     "item.kitchenkarrot.plate_item":"盘子",
+    "item.kitchenkarrot.plate_pieces": "盘子碎片",
 
     "info.kitchenkarrot.dished":"盘装的%s",
     "info.kitchenkarrot.text1":"§7手持食物时右键将食物放在盘子上",

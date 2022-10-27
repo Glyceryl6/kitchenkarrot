@@ -1,10 +1,12 @@
 {
+    "kitchenkarrot.chop": "Chop",
     "itemGroup.kitchenkarrot.main":"Kitchen Karrot",
     "item.kitchenkarrot.water":"Water",
     "item.kitchenkarrot.milk":"Milk",
     "item.kitchenkarrot.ice_cubes":"Ice Cubes",
     "item.kitchenkarrot.carrot_spices":"Carrot Spices",
     "item.kitchenkarrot.empty_can":"Empty Can",
+    "item.kitchenkarrot.knife": "Knife",
     "item.kitchenkarrot.raw_sweet_loaf":"Raw Sweet Loaf",
     "item.kitchenkarrot.sweet_loaf":"Sweet Loaf",
     "item.kitchenkarrot.acorn":"Acorn",
@@ -118,6 +120,7 @@
     "item.kitchenkarrot.acorn_wine_base":"Acorn Wine Base",
     "item.kitchenkarrot.mead_base":"Mead Base",
     "item.kitchenkarrot.plate_item":"Plate",
+    "item.kitchenkarrot.plate_pieces": "Plate Pieces",
 
     "info.kitchenkarrot.dished":"Dished %s",
     "info.kitchenkarrot.text1":"§7Right click plate with food to put the food on plate.",

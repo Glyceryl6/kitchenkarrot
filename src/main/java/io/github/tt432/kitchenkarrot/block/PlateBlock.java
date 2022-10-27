@@ -4,6 +4,7 @@ import io.github.tt432.kitchenkarrot.blockentity.ModBlockEntities;
 import io.github.tt432.kitchenkarrot.blockentity.PlateBlockEntity;
 import io.github.tt432.kitchenkarrot.recipes.recipe.PlateRecipe;
 import io.github.tt432.kitchenkarrot.recipes.register.RecipeTypes;
+import io.github.tt432.kitchenkarrot.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -71,9 +72,10 @@ public class PlateBlock extends FacingEntityBlock<PlateBlockEntity> {
     @NotNull
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (level.isClientSide) {
-            return InteractionResult.SUCCESS;
-        }
+        //为了所有人都可以听到声音，所以把这里注释掉了
+//        if (level.isClientSide) {
+//            return InteractionResult.SUCCESS;
+//        }
 
         AtomicBoolean success = new AtomicBoolean(false);
         BlockEntity blockEntity = level.getBlockEntity(pos);
@@ -118,13 +120,18 @@ public class PlateBlock extends FacingEntityBlock<PlateBlockEntity> {
     }
 
     boolean outPlate(Level level, Player player, IItemHandler handler, ItemStack input, ItemStack heldItem) {
-        Optional<PlateRecipe> recipe = level.getRecipeManager().getAllRecipesFor(RecipeTypes.PLATE.get())
-                .stream().filter(r -> r.matches(Collections.singletonList(input)) && r.canCut(heldItem, input)).findFirst();
+        Optional<PlateRecipe> recipe = level.getRecipeManager()
+                .getAllRecipesFor(RecipeTypes.PLATE.get())
+                .stream()
+                .filter(r ->
+                        r.matches(Collections.singletonList(input)) &&
+                                r.canCut(heldItem, input)).findFirst();
 
         AtomicBoolean result = new AtomicBoolean(false);
 
         recipe.ifPresent(r -> {
             if (giveRecipeResult(level, r, handler)) {
+                level.playSound(player, player.getOnPos(), ModSoundEvents.CHOP.get(), player.getSoundSource(), 0.5F, 0.5F);
                 result.set(true);
             }
         });

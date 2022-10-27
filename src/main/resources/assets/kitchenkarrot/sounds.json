@@ -13,11 +13,11 @@
       "kitchenkarrot:cocktail/cocktail_complete"
     ]
   },
-  "cocktail.chop": {
+  "chop": {
     "replace": false,
-    "subtitle": "kitchenkarrot.cocktail.chop",
+    "subtitle": "kitchenkarrot.chop",
     "sounds": [
-      "kitchenkarrot:cocktail/chop"
+      "kitchenkarrot:chop"
     ]
   },
   "cocktail.shaker_close": {

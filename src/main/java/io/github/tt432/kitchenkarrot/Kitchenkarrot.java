@@ -3,18 +3,15 @@ package io.github.tt432.kitchenkarrot;
 import io.github.tt432.kitchenkarrot.block.ModBlocks;
 import io.github.tt432.kitchenkarrot.blockentity.ModBlockEntities;
 import io.github.tt432.kitchenkarrot.entity.ModEntitys;
-import io.github.tt432.kitchenkarrot.menu.reg.ModMenuTypes;
 import io.github.tt432.kitchenkarrot.item.ModItems;
+import io.github.tt432.kitchenkarrot.menu.reg.ModMenuTypes;
 import io.github.tt432.kitchenkarrot.net.ModNetManager;
 import io.github.tt432.kitchenkarrot.recipes.register.RecipeManager;
 import io.github.tt432.kitchenkarrot.sound.ModSoundEvents;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * @author DustW
@@ -22,25 +19,6 @@ import org.jetbrains.annotations.NotNull;
 @Mod(Kitchenkarrot.MOD_ID)
 public class Kitchenkarrot {
     public static final String MOD_ID = "kitchenkarrot";
-
-    public static final CreativeModeTab MAIN_TAB = new CreativeModeTab(MOD_ID + ".main") {
-
-        @NotNull
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(ModItems.CARROT_SPICES.get());
-        }
-    };
-
-    public static final CreativeModeTab COCKTAIL_TAB = new CreativeModeTab(MOD_ID + ".cocktail") {
-
-        @NotNull
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(ModItems.SHAKER.get());
-        }
-    };
-
     public static boolean farmersdelightLoaded;
     public static boolean neapolitanLoaded;
 

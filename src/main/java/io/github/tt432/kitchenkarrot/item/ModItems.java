@@ -183,20 +183,6 @@ public class ModItems {
     public static final RegistryObject<Item> ACORN_WINE_BASE = cocktail("acorn_wine_base");
 
     //TODO 未来如果有拓展功能的话，这里应该把返回的变量存储。
-    static {
-        if (Kitchenkarrot.farmersdelightLoaded) {
-            food("carrot_pie_slice", 3, 0.5F);
-            food("glow_berry_cookie", 2, 0.2F);
-            foodEffectRemain("chicken_hotpot_with_rice", 10, 12F, Items.BOWL, EffectEntry.of(ModEffects.NOURISHMENT, 180, 1), EffectEntry.of(ModEffects.COMFORT, 180, 1));
-            foodEffectRemain("rice_noodles", 14, 8F, Items.BOWL, EffectEntry.of(ModEffects.NOURISHMENT, 300, 1));
-            foodEffect("bamboo_rice", 9, 7.2F, EffectEntry.of(ModEffects.NOURISHMENT, 180, 1));
-            foodEffectRemain("carrot_conference", 10, 8F, Items.BOWL);
-        }
-
-        if (Kitchenkarrot.neapolitanLoaded) {
-
-        }
-    }
 
     private static RegistryObject<Item> simple(String name) {
         return ITEMS.register(name, () -> new Item(defaultProperties()));

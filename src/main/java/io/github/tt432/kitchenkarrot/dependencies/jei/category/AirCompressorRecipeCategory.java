@@ -2,6 +2,7 @@ package io.github.tt432.kitchenkarrot.dependencies.jei.category;
 
 import io.github.tt432.kitchenkarrot.Kitchenkarrot;
 import io.github.tt432.kitchenkarrot.dependencies.jei.JeiPlugin;
+import io.github.tt432.kitchenkarrot.item.ModBlockItems;
 import io.github.tt432.kitchenkarrot.item.ModItems;
 import io.github.tt432.kitchenkarrot.recipes.recipe.AirCompressorRecipe;
 import mezz.jei.api.constants.VanillaTypes;
@@ -24,7 +25,7 @@ public class AirCompressorRecipeCategory extends BaseRecipeCategory<AirCompresso
 
     public AirCompressorRecipeCategory(IGuiHelper helper) {
         super(JeiPlugin.AIR_COMPRESSOR,
-                helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModItems.AIR_COMPRESSOR.get())),
+                helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlockItems.AIR_COMPRESSOR.get())),
                 helper.createDrawable(BACKGROUND, 0, 0, 176, 166 - 90));
     }
 

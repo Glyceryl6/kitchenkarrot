@@ -14,6 +14,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
@@ -33,8 +34,8 @@ public class CocktailItem extends Item {
 
     public static final ResourceLocation UNKNOWN_COCKTAIL = new ResourceLocation(Kitchenkarrot.MOD_ID, "unknown");
 
-    public CocktailItem(Properties properties) {
-        super(properties);
+    public CocktailItem() {
+        super(ModItems.defaultProperties().food(new FoodProperties.Builder().alwaysEat().build()));
     }
 
     @Override

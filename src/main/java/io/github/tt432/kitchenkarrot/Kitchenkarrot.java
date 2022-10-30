@@ -3,6 +3,7 @@ package io.github.tt432.kitchenkarrot;
 import io.github.tt432.kitchenkarrot.block.ModBlocks;
 import io.github.tt432.kitchenkarrot.blockentity.ModBlockEntities;
 import io.github.tt432.kitchenkarrot.entity.ModEntitys;
+import io.github.tt432.kitchenkarrot.item.ModBlockItems;
 import io.github.tt432.kitchenkarrot.item.ModItems;
 import io.github.tt432.kitchenkarrot.menu.reg.ModMenuTypes;
 import io.github.tt432.kitchenkarrot.net.ModNetManager;
@@ -30,6 +31,7 @@ public class Kitchenkarrot {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
+        ModBlockItems.BLOCK_ITEMS.register(bus);
         ModMenuTypes.MENUS.register(bus);
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
         ModSoundEvents.SOUNDS.register(bus);

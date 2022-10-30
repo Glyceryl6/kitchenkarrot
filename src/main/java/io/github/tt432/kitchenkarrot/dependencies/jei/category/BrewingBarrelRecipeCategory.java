@@ -2,6 +2,7 @@ package io.github.tt432.kitchenkarrot.dependencies.jei.category;
 
 import io.github.tt432.kitchenkarrot.Kitchenkarrot;
 import io.github.tt432.kitchenkarrot.dependencies.jei.JeiPlugin;
+import io.github.tt432.kitchenkarrot.item.ModBlockItems;
 import io.github.tt432.kitchenkarrot.item.ModItems;
 import io.github.tt432.kitchenkarrot.recipes.recipe.BrewingBarrelRecipe;
 import mezz.jei.api.constants.VanillaTypes;
@@ -21,7 +22,7 @@ public class BrewingBarrelRecipeCategory extends BaseRecipeCategory<BrewingBarre
 
     public BrewingBarrelRecipeCategory(IGuiHelper helper) {
         super(JeiPlugin.BREWING_BARREL,
-                helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModItems.BREWING_BARREL.get())),
+                helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlockItems.BREWING_BARREL.get())),
                 helper.createDrawable(BACKGROUND, 0, 0, 176, 166 - 90));
     }
 

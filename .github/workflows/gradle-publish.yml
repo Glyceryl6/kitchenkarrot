@@ -61,6 +61,6 @@ jobs:
           # Artifact name
           name: kitchenkarrot-demo
           # Path to the file to upload
-          path: output
+          path: build/libs
           # secrets.GITHUB_TOKEN
           repo-token: ${{ secrets.GITHUB_TOKEN }}

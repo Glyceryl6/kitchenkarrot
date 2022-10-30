@@ -14,9 +14,9 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
 @ParametersAreNonnullByDefault
-public class PlateBlockItem extends BlockItem {
+public class FilledPlateItem extends BlockItem {
 
-    public PlateBlockItem(Block block, Properties properties) {
+    public FilledPlateItem(Block block, Properties properties) {
         super(block, properties);
     }
 
@@ -28,7 +28,7 @@ public class PlateBlockItem extends BlockItem {
         tooltip.add(new TranslatableComponent("info.kitchenkarrot.text3"));
         if (level != null) {
             if (Screen.hasShiftDown()) {
-                PlateItem.showPlateRecipeList(tooltip);
+                EmptyPlateItem.showPlateRecipeList(tooltip);
             } else {
                 tooltip.add(new TranslatableComponent("info.kitchenkarrot.text4"));
             }

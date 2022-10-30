@@ -5,6 +5,7 @@ import io.github.tt432.kitchenkarrot.dependencies.jei.category.AirCompressorReci
 import io.github.tt432.kitchenkarrot.dependencies.jei.category.BrewingBarrelRecipeCategory;
 import io.github.tt432.kitchenkarrot.dependencies.jei.category.CocktailRecipeCategory;
 import io.github.tt432.kitchenkarrot.gui.AirCompressorGui;
+import io.github.tt432.kitchenkarrot.item.ModBlockItems;
 import io.github.tt432.kitchenkarrot.item.ModItems;
 import io.github.tt432.kitchenkarrot.menu.AirCompressorMenu;
 import io.github.tt432.kitchenkarrot.menu.BrewingBarrelMenu;
@@ -61,9 +62,9 @@ public class JeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-        registration.addRecipeCatalyst(new ItemStack(ModItems.AIR_COMPRESSOR.get()), AIR_COMPRESSOR);
+        registration.addRecipeCatalyst(new ItemStack(ModBlockItems.AIR_COMPRESSOR.get()), AIR_COMPRESSOR);
         registration.addRecipeCatalyst(new ItemStack(ModItems.SHAKER.get()), COCKTAIL);
-        registration.addRecipeCatalyst(new ItemStack(ModItems.BREWING_BARREL.get()), BREWING_BARREL);
+        registration.addRecipeCatalyst(new ItemStack(ModBlockItems.BREWING_BARREL.get()), BREWING_BARREL);
     }
 
     @Override

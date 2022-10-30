@@ -1,7 +1,8 @@
 package io.github.tt432.kitchenkarrot.item;
 
-import io.github.tt432.kitchenkarrot.Kitchenkarrot;
 import io.github.tt432.kitchenkarrot.block.ModBlocks;
+import io.github.tt432.kitchenkarrot.item.food.*;
+import io.github.tt432.kitchenkarrot.item.food.BowlFoodItem;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -10,11 +11,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
-import vectorwing.farmersdelight.common.registry.ModEffects;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import static io.github.tt432.kitchenkarrot.Kitchenkarrot.MOD_ID;
+import static io.github.tt432.kitchenkarrot.item.food.FoodUtil.defaultFood;
 
 /**
  * @author DustW
@@ -24,263 +25,158 @@ import static io.github.tt432.kitchenkarrot.Kitchenkarrot.MOD_ID;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
     //table sets
-    public static final RegistryObject<Item> EMPTY_PLATE = ITEMS.register("plate_item", () -> new PlateItem(defaultProperties()));
-    public static final RegistryObject<Item> FOOD_FILLED_PLATE = ITEMS.register("plate", () -> new PlateBlockItem(ModBlocks.PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> PLATE_PIECES = ITEMS.register("plate_pieces", () -> new Item(defaultProperties()));
-    public static final RegistryObject<Item> KNIFE = ITEMS.register("knife", () -> new KnifeItem(defaultProperties()));
-    public static final RegistryObject<Item> AIR_COMPRESSOR = block("air_compressor", ModBlocks.AIR_COMPRESSOR);
-    public static final RegistryObject<Item> BREWING_BARREL = block("brewing_barrel", ModBlocks.BREWING_BARREL);
-    public static final RegistryObject<Item> COASTER = block("coaster", ModBlocks.COASTER);
-    public static final RegistryObject<Item> SUNFLOWER_OIL = block("sunflower_oil", ModBlocks.SUNFLOWER_OIL);
-    public static final RegistryObject<Item> CHORUS_OIL = block("chorus_oil", ModBlocks.CHORUS_OIL);
-    public static final RegistryObject<Item> ACORN_OIL = block("acorn_oil", ModBlocks.ACORN_OIL);
-    public static final RegistryObject<Item> ROCK_SALT = block("rock_salt", ModBlocks.ROCK_SALT);
-    public static final RegistryObject<Item> FINE_SALT = block("fine_salt", ModBlocks.FINE_SALT);
-    public static final RegistryObject<Item> SEA_SALT = block("sea_salt", ModBlocks.SEA_SALT);
-    //ingredients
-    public static final RegistryObject<Item> WATER = simple("water");
-    public static final RegistryObject<Item> MILK = simple("milk");
-    public static final RegistryObject<Item> EMPTY_CAN = simple("empty_can");
-    public static final RegistryObject<Item> ICE_CUBES = simple("ice_cubes");
-    public static final RegistryObject<Item> CARROT_SPICES = simple("carrot_spices");
-    public static final RegistryObject<Item> ACORN = food("acorn", 2, 1F);
-    public static final RegistryObject<Item> GEM_CARROT = food("gem_carrot", 6, 8);
-    //beef in dripleaf
-    public static final RegistryObject<Item> RAW_BEEF_IN_DRIPLEAF = simple("raw_beef_in_dripleaf");
-    public static final RegistryObject<Item> BEEF_IN_DRIPLEAF = food("beef_in_dripleaf", 12, 16);
-    public static final RegistryObject<Item> SMALL_BEEF_IN_DRIPLEAF = food("small_beef_in_dripleaf", 6, 8);
-    //soothing tea
-    public static final RegistryObject<Item> SOOTHING_TEA = ITEMS.register("soothing_tea", () -> new ClearEffectItem(defaultProperties().food(new FoodProperties.Builder().saturationMod(3.6F).build())) {
-        @Override
-        @NotNull
-        public UseAnim getUseAnimation(ItemStack pStack) {
-            return UseAnim.DRINK;
-        }
 
+
+    //FoodItem
+    public static final RegistryObject<FoodItem> BEEF_IN_DRIPLEAF = ITEMS.register("beef_in_dripleaf", () -> new FoodItem(12, 16));
+    public static final RegistryObject<FoodItem> SMALL_BEEF_IN_DRIPLEAF = ITEMS.register("small_beef_in_dripleaf", () -> new FoodItem(6, 8));
+    public static final RegistryObject<FoodItem> BAMBOO_POTATO = ITEMS.register("bamboo_potato", () -> new FoodItem(8, 8));
+    public static final RegistryObject<FoodItem> PICKLED_SEA_PICKLES = ITEMS.register("pickled_sea_pickles", () -> new FoodItem(3, 2));
+    public static final RegistryObject<FoodItem> BIRCH_SAP_CHOCOLATE_BAR = ITEMS.register("birch_sap_chocolate_bar", () -> new FoodItem(5, 9.2F));
+    public static final RegistryObject<FoodItem> CHOCOLATE_CROISSANT = ITEMS.register("chocolate_croissant", () -> new FoodItem(7, 8));
+    public static final RegistryObject<FoodItem> BEETROOT_CREPE = ITEMS.register("beetroot_crepe", () -> new FoodItem(10, 9.6F));
+    public static final RegistryObject<FoodItem> CHINESE_CREPE = ITEMS.register("chinese_crepe", () -> new FoodItem(10, 9.6F));
+    public static final RegistryObject<FoodItem> CROQUE_MADAME = ITEMS.register("croque_madame", () -> new FoodItem(8, 10));
+    public static final RegistryObject<FoodItem> GRILLED_WHEATMEAL = ITEMS.register("grilled_wheatmeal", () -> new FoodItem(3, 1));
+    public static final RegistryObject<FoodItem> GRILLED_FISH_AND_CACTUS = ITEMS.register("grilled_fish_and_cactus", () -> new FoodItem(8, 6.4F));
+    public static final RegistryObject<FoodItem> FLOWER_CAKE = ITEMS.register("flower_cake", () -> new FoodItem(6, 4.8F));
+    public static final RegistryObject<FoodItem> PILLAGER_PIE = ITEMS.register("pillager_pie", () -> new FoodItem(8, 4.8F, EffectEntry.of(MobEffects.BAD_OMEN, 600, 1)));
+    public static final RegistryObject<FoodItem> MONSTER_LASAGNA = ITEMS.register("monster_lasagna", () -> new FoodItem(13, 3.2F, EffectEntry.of(MobEffects.HUNGER, 30, 1)));
+    public static final RegistryObject<FoodItem> SMALL_MONSTER_LASAGNA = ITEMS.register("small_monster_lasagna", () -> new FoodItem(5, 1.6F, EffectEntry.of(MobEffects.HUNGER, 10, 1)));
+    public static final RegistryObject<FoodItem> CHORUS_MOUSSE = ITEMS.register("chorus_mousse", () -> new FoodItem(12, 14.4F));
+    public static final RegistryObject<FoodItem> SMALL_CHORUS_MOUSSE = ITEMS.register("small_chorus_mousse", () -> new FoodItem(4, 4.8F));
+    public static final RegistryObject<FoodItem> SLIME_MOUSSE = ITEMS.register("slime_mousse", () -> new FoodItem(12, 14.4F));
+    public static final RegistryObject<FoodItem> SMALL_SLIME_MOUSSE = ITEMS.register("small_slime_mousse", () -> new FoodItem(4, 4.8F));
+    public static final RegistryObject<FoodItem> DUNGEON_PIZZA_SLICE = ITEMS.register("dungeon_pizza_slice", () -> new FoodItem(10, 6F, EffectEntry.of(MobEffects.POISON, 10, 0.2F)));
+    public static final RegistryObject<FoodItem> FEAST_PIZZA_SLICE = ITEMS.register("feast_pizza_slice", () -> new FoodItem(10, 12.8F));
+    public static final RegistryObject<FoodItem> SHINY_PIZZA_SLICE = ITEMS.register("shiny_pizza_slice", () -> new FoodItem(7, 24));
+    public static final RegistryObject<FoodItem> SWEET_LOAF = ITEMS.register("sweet_loaf", () -> new FoodItem(0, 0));
+    public static final RegistryObject<FoodItem> SWEET_LOAF_SLICE = ITEMS.register("sweet_loaf_slice", () -> new FoodItem(7, 9.6F));
+    public static final RegistryObject<FoodItem> EGG_TART = ITEMS.register("egg_tart", () -> new FoodItem(5, 7.2F));
+    public static final RegistryObject<FoodItem> SWEET_BERRY_TART = ITEMS.register("sweet_berry_tart", () -> new FoodItem(5, 7.2F));
+    public static final RegistryObject<FoodItem> CARROT_TART = ITEMS.register("carrot_tart", () -> new FoodItem(5, 7.2F));
+    public static final RegistryObject<FoodItem> HONEY_BRULEE = ITEMS.register("honey_brulee", () -> new FoodItem(4, 9.6F));
+    public static final RegistryObject<FoodItem> LAVA_BRULEE = ITEMS.register("lava_brulee", () -> new FoodItem(4, 9.6F));
+    public static final RegistryObject<FoodItem> HI_NRG_BRULEE = ITEMS.register("hi_nrg_brulee", () -> new FoodItem(4, 14.4F));
+    public static final RegistryObject<FoodItem> SIRLOIN_STEAK = ITEMS.register("sirloin_steak", () -> new FoodItem(12, 14.4F));
+    public static final RegistryObject<FoodItem> BEEF_GRAINS = ITEMS.register("beef_grains", () -> new FoodItem(3, 4));
+    public static final RegistryObject<FoodItem> SASHIMI = ITEMS.register("sashimi", () -> new FoodItem(4, 2.4F));
+    public static final RegistryObject<FoodItem> MOSS_FRIED_LAMB_CUTLETS = ITEMS.register("moss_fried_lamb_cutlets", () -> new FoodItem(10, 12.8F));
+    public static final RegistryObject<FoodItem> FRIES = ITEMS.register("fries", () -> new FoodItem(7, 10.8F));
+    public static final RegistryObject<FoodItem> DRUMSTICK = ITEMS.register("drumstick", () -> new FoodItem(9, 12.8F));
+    public static final RegistryObject<FoodItem> FRIED_CHICKEN_COMBO = ITEMS.register("fried_chicken_combo", () -> new FoodItem(15, 30));
+    public static final RegistryObject<FoodItem> RAW_VEGGIE_BEEF = ITEMS.register("raw_veggie_beef", () -> new FoodItem(3, 1.8F));
+    public static final RegistryObject<FoodItem> COOKED_VEGGIE_BEEF = ITEMS.register("cooked_veggie_beef", () -> new FoodItem(8, 12.8F));
+    public static final RegistryObject<FoodItem> RAW_VEGGIE_PORK = ITEMS.register("raw_veggie_pork", () -> new FoodItem(3, 0.6F));
+    public static final RegistryObject<FoodItem> COOKED_VEGGIE_PORK = ITEMS.register("cooked_veggie_pork", () -> new FoodItem(8, 12.8F));
+    public static final RegistryObject<FoodItem> RAW_VEGGIE_RABBIT = ITEMS.register("raw_veggie_rabbit", () -> new FoodItem(2, 1.2F));
+    public static final RegistryObject<FoodItem> COOKED_VEGGIE_RABBIT = ITEMS.register("cooked_veggie_rabbit", () -> new FoodItem(6, 7.2F));
+
+
+    //DrinkItem
+    public static final RegistryObject<DrinkItem> SOOTHING_TEA = ITEMS.register("soothing_tea", () -> new DrinkItem(3.6F) {
         @Override
         public int getUseDuration(ItemStack pStack) {
             return 48;
         }
     });
-    //classic
-    public static final RegistryObject<Item> KELP_WITH_SUNFLOWER_SEED = fastFood("kelp_with_sunflower_seed", 2, 1, 12);
-    public static final RegistryObject<Item> FRIED_PUMPKIN_CAKE = fastFood("fried_pumpkin_cake", 4, 3.2F, 24);
-    public static final RegistryObject<Item> SEED_PIE = fastFood("seed_pie", 4, 2.4F, 24);
-    public static final RegistryObject<Item> BIRCH_SAP = drink("birch_sap", 3, 2);
-    public static final RegistryObject<Item> BAMBOO_POTATO = food("bamboo_potato", 8, 8);
-    public static final RegistryObject<Item> PICKLED_SEA_PICKLES = food("pickled_sea_pickles", 3, 2);
-    public static final RegistryObject<Item> BIRCH_SAP_CHOCOLATE_BAR = food("birch_sap_chocolate_bar", 5, 9.2F);
-    public static final RegistryObject<Item> CHOCOLATE_CROISSANT = food("chocolate_croissant", 7, 8);
-    public static final RegistryObject<Item> BEETROOT_CREPE = food("beetroot_crepe", 10, 9.6F);
-    public static final RegistryObject<Item> CHINESE_CREPE = food("chinese_crepe", 10, 9.6F);
-    public static final RegistryObject<Item> CROQUE_MADAME = food("croque_madame", 8, 10);
-    public static final RegistryObject<Item> GRILLED_WHEATMEAL = food("grilled_wheatmeal", 3, 1);
-    public static final RegistryObject<Item> GRILLED_FISH_AND_CACTUS = food("grilled_fish_and_cactus", 8, 6.4F);
-    public static final RegistryObject<Item> FLOWER_CAKE = food("flower_cake", 6, 4.8F);
-    public static final RegistryObject<Item> PILLAGER_PIE = foodEffect("pillager_pie", 8, 4.8F, EffectEntry.of(MobEffects.BAD_OMEN, 600, 1));
-    public static final RegistryObject<Item> FISHERMENS_DELIGHT = foodEffectRemain("fishermens_delight", 10, 10.4F, Items.BOWL, EffectEntry.of(MobEffects.LUCK, 180, 1));
-    public static final RegistryObject<Item> CREAM_OF_MUSHROOM_SOUP = drinkEffectRemain("cream_of_mushroom_soup", 8, 9.2F, Items.BOWL);
-    public static final RegistryObject<Item> MONSTER_LASAGNA = foodEffect("monster_lasagna", 13, 3.2F, EffectEntry.of(MobEffects.HUNGER, 30, 1));
-    public static final RegistryObject<Item> SMALL_MONSTER_LASAGNA = foodEffect("small_monster_lasagna", 5, 1.6F, EffectEntry.of(MobEffects.HUNGER, 10, 1));
-    public static final RegistryObject<Item> SWEET_BERRY_MILK = drinkEffectRemain("sweet_berry_milk", 4, 4.8F, Items.GLASS_BOTTLE, EffectEntry.of(MobEffects.INVISIBILITY, 60, 1));
-    //mousse
-    public static final RegistryObject<Item> CHORUS_MOUSSE = food("chorus_mousse", 12, 14.4F);
-    public static final RegistryObject<Item> SMALL_CHORUS_MOUSSE = food("small_chorus_mousse", 4, 4.8F);
-    public static final RegistryObject<Item> SLIME_MOUSSE = food("slime_mousse", 12, 14.4F);
-    public static final RegistryObject<Item> SMALL_SLIME_MOUSSE = food("small_slime_mousse", 4, 4.8F);
-    //pizza
-    public static final RegistryObject<Item> DUNGEON_PIZZA = simple("dungeon_pizza");
-    public static final RegistryObject<Item> DUNGEON_PIZZA_SLICE = foodEffect("dungeon_pizza_slice", 10, 6F, EffectEntry.of(MobEffects.POISON, 10, .2F));
-    public static final RegistryObject<Item> FEAST_PIZZA = simple("feast_pizza");
-    public static final RegistryObject<Item> FEAST_PIZZA_SLICE = food("feast_pizza_slice", 10, 12.8F);
-    public static final RegistryObject<Item> SHINY_PIZZA = simple("shiny_pizza");
-    public static final RegistryObject<Item> SHINY_PIZZA_SLICE = food("shiny_pizza_slice", 7, 24);
-    //sweet loaf
-    public static final RegistryObject<Item> RAW_SWEET_LOAF = simple("raw_sweet_loaf");
-    public static final RegistryObject<Item> SWEET_LOAF = simple("sweet_loaf");
-    public static final RegistryObject<Item> SWEET_LOAF_SLICE = food("sweet_loaf_slice", 7, 9.6F);
-    //salad
-    public static final RegistryObject<Item> LUSH_SALAD = food("lush_salad", 7, 6.4F);
-    public static final RegistryObject<Item> FRESH_SALAD = food("fresh_salad", 6, 4);
-    public static final RegistryObject<Item> TRAVELERS_SALAD = food("travelers_salad", 5, 3.2F);
-    //cereal porridge
-    public static final RegistryObject<Item> FRUIT_CEREAL_PORRIDGE = food("fruit_cereal_porridge", 7, 9.6F);
-    public static final RegistryObject<Item> CREEPER_CEREAL_PORRIDGE = food("creeper_cereal_porridge", 7, 9.6F);
-    public static final RegistryObject<Item> ULTRA_SUPER_DELICIOUS_CEREAL_PORRIDGE = food("ultra_super_delicious_cereal_porridge", 20, 100F);
-    //tarts
-    public static final RegistryObject<Item> EGG_TART = food("egg_tart", 5, 7.2F);
-    public static final RegistryObject<Item> SWEET_BERRY_TART = food("sweet_berry_tart", 5, 7.2F);
-    public static final RegistryObject<Item> CARROT_TART = food("carrot_tart", 5, 7.2F);
-    //brulee
-    public static final RegistryObject<Item> HONEY_BRULEE = food("honey_brulee", 4, 9.6F);
-    public static final RegistryObject<Item> LAVA_BRULEE = food("lava_brulee", 4, 9.6F);
-    public static final RegistryObject<Item> HI_NRG_BRULEE = food("hi_nrg_brulee", 4, 14.4F);
-    //modern
-    public static final RegistryObject<Item> SIRLOIN_STEAK = food("sirloin_steak", 12, 14.4F);
-    public static final RegistryObject<Item> BEEF_GRAINS = food("beef_grains", 3, 4);
-    public static final RegistryObject<Item> SASHIMI = food("sashimi", 4, 2.4F);
-    public static final RegistryObject<Item> MOSS_FRIED_LAMB_CUTLETS = food("moss_fried_lamb_cutlets", 10, 12.8F);
-    public static final RegistryObject<Item> FRIES = food("fries", 7, 10.8F);
-    public static final RegistryObject<Item> DRUMSTICK = food("drumstick", 9, 12.8F);
-    public static final RegistryObject<Item> FRIED_CHICKEN_COMBO = food("fried_chicken_combo", 15, 30);
-    public static final RegistryObject<Item> POPACORN = ITEMS.register("popacorn", () -> new PopcornItem(defaultProperties().food(defaultFood(2, 3.2F).build())));
-    public static final RegistryObject<Item> CURRY_UDON = food("curry_udon", 10, 14.4F);
-    public static final RegistryObject<Item> CUPCAKE = fastFood("cupcake", 2, 3.2F, 24);
-    public static final RegistryObject<Item> RICE_CAKE = fastFood("rice_cake", 4, 4, 18);
-    public static final RegistryObject<Item> LEAFY_FRESH_CHOCOLATE = fastFood("leafy_fresh_chocolate", 2, 4.8F, 18);
-    //veggie meat
-    public static final RegistryObject<Item> RAW_VEGGIE_BEEF = food("raw_veggie_beef", 3, 1.8F);
-    public static final RegistryObject<Item> COOKED_VEGGIE_BEEF = food("cooked_veggie_beef", 8, 12.8F);
-    public static final RegistryObject<Item> RAW_VEGGIE_PORK = food("raw_veggie_pork", 3, 0.6F);
-    public static final RegistryObject<Item> COOKED_VEGGIE_PORK = food("cooked_veggie_pork", 8, 12.8F);
-    public static final RegistryObject<Item> RAW_VEGGIE_RABBIT = food("raw_veggie_rabbit", 2, 1.2F);
-    public static final RegistryObject<Item> COOKED_VEGGIE_RABBIT = food("cooked_veggie_rabbit", 6, 7.2F);
-    //canned
-    public static final RegistryObject<Item> CANNED_RABBIT_PUMPKIN = canned("canned_rabbit_pumpkin", 8, 12.8F, 1);
-    public static final RegistryObject<Item> CANNED_PORK_BEETROOT = canned("canned_pork_beetroot", 8, 12.8F, 1);
-    public static final RegistryObject<Item> CANNED_CANDIED_APPLE = canned("canned_candied_apple", 6, 14.4F, 1);
-    public static final RegistryObject<Item> CANNED_BEEF_POTATO = canned("canned_beef_potato", 8, 12.8F, 1);
-    public static final RegistryObject<Item> CANNED_SWEET_BERRY_MILK = canned("canned_sweet_berry_milk", 4, 4.8F, 1, EffectEntry.of(MobEffects.INVISIBILITY, 90, 1));
-    public static final RegistryObject<Item> CANNED_HOGLIN_CONFIT = canned("canned_hoglin_confit", 8, 12.8F, 1);
-    //alcohol
-    public static final RegistryObject<Item> ICED_MELON_LAGER = drinkFoodEffect("iced_melon_lager", 3, 2.4F, EffectEntry.of(MobEffects.FIRE_RESISTANCE, 300, 2, 1));
-    public static final RegistryObject<Item> GLOW_BERRY_LAGER = drinkFoodEffect("glow_berry_lager", 2, 2.4F, EffectEntry.of(MobEffects.GLOWING, 300, 2, 1));
-    public static final RegistryObject<Item> ACORN_WINE = drinkFoodEffect("acorn_wine", 2, 5.2F);
-    public static final RegistryObject<Item> MEAD = ITEMS.register("mead", () -> new ClearEffectItem(defaultProperties().food(new FoodProperties.Builder().build())) {
-        @Override
-        @NotNull
-        public UseAnim getUseAnimation(ItemStack pStack) {
-            return UseAnim.DRINK;
-        }
-    });
-    public static final RegistryObject<Item> RUM = drinkFoodEffect("rum", 0, 0F, EffectEntry.of(MobEffects.DOLPHINS_GRACE, 300, 1));
-    public static final RegistryObject<Item> VODKA = drinkFoodEffect("vodka", 0, 0F, EffectEntry.of(MobEffects.DAMAGE_BOOST, 300, 1));
-    //soda
-    public static final RegistryObject<Item> LIGHT_SODA = ITEMS.register("light_soda", () -> new ClearEffectItem(defaultProperties().food(new FoodProperties.Builder().build())) {
-        @Override
-        @NotNull
-        public UseAnim getUseAnimation(ItemStack pStack) {
-            return UseAnim.DRINK;
-        }
-    });
-    public static final RegistryObject<Item> KELP_SODA = fastDrink("kelp_soda", 0, 0F, 24, EffectEntry.of(MobEffects.WATER_BREATHING, 180, 1));
+    public static final RegistryObject<DrinkItem> BIRCH_SAP = ITEMS.register("birch_sap", () -> new DrinkItem(3, 2));
+    public static final RegistryObject<DrinkItem> ICED_MELON_LAGER = ITEMS.register("iced_melon_lager", () -> new DrinkItem(3, 2.4F, EffectEntry.of(MobEffects.FIRE_RESISTANCE, 300, 2, 1)));
+    public static final RegistryObject<DrinkItem> GLOW_BERRY_LAGER = ITEMS.register("glow_berry_lager", () -> new DrinkItem(2, 2.4F, EffectEntry.of(MobEffects.GLOWING, 300, 2, 1)));
+    public static final RegistryObject<DrinkItem> ACORN_WINE = ITEMS.register("acorn_wine", () -> new DrinkItem(2, 5.2F));
+    public static final RegistryObject<DrinkItem> MEAD = ITEMS.register("mead", () -> new DrinkItem(0, 0F));
+    public static final RegistryObject<DrinkItem> RUM = ITEMS.register("rum", () -> new DrinkItem(0, 0F, EffectEntry.of(MobEffects.DOLPHINS_GRACE, 300, 1)));
+    public static final RegistryObject<DrinkItem> VODKA = ITEMS.register("vodka", () -> new DrinkItem(0, 0F, EffectEntry.of(MobEffects.DAMAGE_BOOST, 300, 1)));
 
-    public static final RegistryObject<Item> TWISTING_SODA = fastDrink("twisting_soda", 0, 0F, 24, EffectEntry.of(MobEffects.ABSORPTION, 60, 1));
+    //SnackItem
+    public static final RegistryObject<SnackItem> KELP_WITH_SUNFLOWER_SEED = ITEMS.register("kelp_with_sunflower_seed", () -> new SnackItem(2, 1, 12));
+    public static final RegistryObject<SnackItem> FRIED_PUMPKIN_CAKE = ITEMS.register("fried_pumpkin_cake", () -> new SnackItem(4, 3.2F, 24));
+    public static final RegistryObject<SnackItem> SEED_PIE = ITEMS.register("seed_pie", () -> new SnackItem(4, 2.4F, 24));
+    public static final RegistryObject<SnackItem> CUPCAKE = ITEMS.register("cupcake", () -> new SnackItem(2, 3.2F, 24));
+    public static final RegistryObject<SnackItem> RICE_CAKE = ITEMS.register("rice_cake", () -> new SnackItem(4, 4, 18));
+    public static final RegistryObject<SnackItem> LEAFY_FRESH_CHOCOLATE = ITEMS.register("leafy_fresh_chocolate", () -> new SnackItem(2, 4.8F, 18));
 
-    //coke
-    public static final RegistryObject<Item> DANDELION_COKE = fastDrink("dandelion_coke", 0, 0F, 24, EffectEntry.of(MobEffects.MOVEMENT_SPEED, 180, 2), EffectEntry.of(MobEffects.DIG_SPEED, 180, 2, 1));
-    public static final RegistryObject<Item> CORAL_COKE = fastDrink("coral_coke", 0, 0F, 24, EffectEntry.of(MobEffects.MOVEMENT_SPEED, 180, 3), EffectEntry.of(MobEffects.DIG_SPEED, 180, 1, 1));
-    public static final RegistryObject<Item> DRAGON_BREATH_COKE = fastDrink("dragon_breath_coke", 0, 0F, 24, EffectEntry.of(MobEffects.MOVEMENT_SPEED, 180, 1), EffectEntry.of(MobEffects.DIG_SPEED, 180, 3, 1));
+    //SnackDrinkItem
+    public static final RegistryObject<SnackDrinkItem> LIGHT_SODA = ITEMS.register("light_soda", () -> new SnackDrinkItem(0, 0, 72000));
+    public static final RegistryObject<SnackDrinkItem> KELP_SODA = ITEMS.register("kelp_soda", () -> new SnackDrinkItem(0, 0F, 24, EffectEntry.of(MobEffects.WATER_BREATHING, 180, 1)));
+    public static final RegistryObject<SnackDrinkItem> TWISTING_SODA = ITEMS.register("twisting_soda", () -> new SnackDrinkItem(0, 0F, 24, EffectEntry.of(MobEffects.ABSORPTION, 60, 1)));
+    public static final RegistryObject<SnackDrinkItem> DANDELION_COKE = ITEMS.register("dandelion_coke", () -> new SnackDrinkItem(0, 0F, 24, EffectEntry.of(MobEffects.MOVEMENT_SPEED, 180, 2), EffectEntry.of(MobEffects.DIG_SPEED, 180, 2, 1)));
+    public static final RegistryObject<SnackDrinkItem> CORAL_COKE = ITEMS.register("coral_coke", () -> new SnackDrinkItem(0, 0F, 24, EffectEntry.of(MobEffects.MOVEMENT_SPEED, 180, 3), EffectEntry.of(MobEffects.DIG_SPEED, 180, 1, 1)));
+    public static final RegistryObject<SnackDrinkItem> DRAGON_BREATH_COKE = ITEMS.register("dragon_breath_coke", () -> new SnackDrinkItem(0, 0F, 24, EffectEntry.of(MobEffects.MOVEMENT_SPEED, 180, 1), EffectEntry.of(MobEffects.DIG_SPEED, 180, 3, 1)));
 
+    //BowlFoodItem
+    public static final RegistryObject<BowlFoodItem> FISHERMENS_DELIGHT = ITEMS.register("fishermens_delight", () -> new BowlFoodItem(10, 10.4F));
+    public static final RegistryObject<BowlFoodItem> LUSH_SALAD = ITEMS.register("lush_salad", () -> new BowlFoodItem(7, 6.4F));
+    public static final RegistryObject<BowlFoodItem> FRESH_SALAD = ITEMS.register("fresh_salad", () -> new BowlFoodItem(6, 4));
+    public static final RegistryObject<BowlFoodItem> TRAVELERS_SALAD = ITEMS.register("travelers_salad", () -> new BowlFoodItem(5, 3.2F));
+    public static final RegistryObject<BowlFoodItem> FRUIT_CEREAL_PORRIDGE = ITEMS.register("fruit_cereal_porridge", () -> new BowlFoodItem(7, 9.6F));
+    public static final RegistryObject<BowlFoodItem> CREEPER_CEREAL_PORRIDGE = ITEMS.register("creeper_cereal_porridge", () -> new BowlFoodItem(7, 9.6F));
 
-    public static final RegistryObject<Item> COCKTAIL = ITEMS.register("cocktail", () -> new CocktailItem(defaultProperties().food(new FoodProperties.Builder().alwaysEat().build())));
+    //InstantFoodItem
+    public static final RegistryObject<InstantFoodItem> CANNED_RABBIT_PUMPKIN = ITEMS.register("canned_rabbit_pumpkin", () -> new InstantFoodItem(8, 12.8F));
+    public static final RegistryObject<InstantFoodItem> CANNED_PORK_BEETROOT = ITEMS.register("canned_pork_beetroot", () -> new InstantFoodItem(8, 12.8F));
+    public static final RegistryObject<InstantFoodItem> CANNED_CANDIED_APPLE = ITEMS.register("canned_candied_apple", () -> new InstantFoodItem(6, 14.4F));
+    public static final RegistryObject<InstantFoodItem> CANNED_BEEF_POTATO = ITEMS.register("canned_beef_potato", () -> new InstantFoodItem(8, 12.8F));
+    public static final RegistryObject<InstantFoodItem> CANNED_SWEET_BERRY_MILK = ITEMS.register("canned_sweet_berry_milk", () -> new InstantFoodItem(4, 4.8F, EffectEntry.of(MobEffects.INVISIBILITY, 90, 1)));
+    public static final RegistryObject<InstantFoodItem> CANNED_HOGLIN_CONFIT = ITEMS.register("canned_hoglin_confit", () -> new InstantFoodItem(8, 12.8F));
 
-    public static final RegistryObject<Item> SHAKER = ITEMS.register("shaker", () -> new ShakerItem(cocktailProperties().stacksTo(1)));
+    //CreamSoupItem
+    public static final RegistryObject<CreamSoupItem> CREAM_OF_MUSHROOM_SOUP = ITEMS.register("cream_of_mushroom_soup", () -> new CreamSoupItem(8, 9.2F));
 
-    public static final RegistryObject<Item> RUM_BASE = cocktail("rum_base");
-    public static final RegistryObject<Item> MEAD_BASE = cocktail("mead_base");
-    public static final RegistryObject<Item> VODKA_BASE = cocktail("vodka_base");
-    public static final RegistryObject<Item> ACORN_WINE_BASE = cocktail("acorn_wine_base");
+    //SweetBerryMilkItem
+    public static final RegistryObject<SweetBerryMilkItem> SWEET_BERRY_MILK = ITEMS.register("sweet_berry_milk", () -> new SweetBerryMilkItem(4, 4.8F, EffectEntry.of(MobEffects.INVISIBILITY, 60, 1)));
 
-    //TODO 未来如果有拓展功能的话，这里应该把返回的变量存储。
+    //UltraCerealItem
+    public static final RegistryObject<UltraCerealItem> ULTRA_SUPER_DELICIOUS_CEREAL_PORRIDGE = ITEMS.register("ultra_super_delicious_cereal_porridge", () -> new UltraCerealItem(20, 100F));
 
-    private static RegistryObject<Item> simple(String name) {
-        return ITEMS.register(name, () -> new Item(defaultProperties()));
-    }
+    //CurryUdonItem
+    public static final RegistryObject<CurryUdonItem> CURRY_UDON = ITEMS.register("curry_udon", () -> new CurryUdonItem(10, 14.4F));
 
-    private static RegistryObject<Item> block(String name, RegistryObject<Block> block) {
-        return ITEMS.register(name, () -> new BlockItem(block.get(), defaultProperties()));
-    }
+    //PopacornItem
+    public static final RegistryObject<PopacornItem> POPACORN = ITEMS.register("popacorn", PopacornItem::new);
 
-    private static RegistryObject<Item> cocktail(String name) {
-        return ITEMS.register(name, () -> new Item(cocktailProperties()));
-    }
+    //EmptyPlateItem
+    public static final RegistryObject<Item> EMPTY_PLATE = ITEMS.register("plate_item", () -> new EmptyPlateItem(defaultProperties()));
 
-    private static RegistryObject<Item> food(String name, int nutrition, float saturation) {
-        return ITEMS.register(name, () -> new Item(defaultProperties().food(defaultFood(nutrition, saturation).build())));
-    }
+    //FilledPlateItem
+    public static final RegistryObject<Item> FOOD_FILLED_PLATE = ITEMS.register("plate", () -> new FilledPlateItem(ModBlocks.PLATE.get(), new Item.Properties()));
 
-    public static RegistryObject<Item> drink(String name, int nutrition, float saturation) {
-        return ITEMS.register(name, () -> new Item(defaultProperties().food(defaultFood(nutrition, saturation).build())) {
-            @Override
-            @NotNull
-            public UseAnim getUseAnimation(ItemStack pStack) {
-                return UseAnim.DRINK;
-            }
-        });
-    }
+    //KnifeItem
+    public static final RegistryObject<KnifeItem> KNIFE = ITEMS.register("knife", KnifeItem::new);
 
-    private static RegistryObject<Item> foodEffect(String name, int nutrition, float saturation, EffectEntry... list) {
-        return ITEMS.register(name, () -> new Item(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list))));
-    }
+    //ShakerItem
+    public static final RegistryObject<ShakerItem> SHAKER = ITEMS.register("shaker", ShakerItem::new);
 
-    private static RegistryObject<Item> drinkFoodEffect(String name, int nutrition, float saturation, EffectEntry... list) {
-        return ITEMS.register(name, () -> new Item(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list))) {
-            @Override
-            @NotNull
-            public UseAnim getUseAnimation(ItemStack pStack) {
-                return UseAnim.DRINK;
-            }
-        });
-    }
+    //BaseLiquorItem
+    public static final RegistryObject<BaseLiquorItem> RUM_BASE = ITEMS.register("rum_base", BaseLiquorItem::new);
+    public static final RegistryObject<BaseLiquorItem> MEAD_BASE = ITEMS.register("mead_base", BaseLiquorItem::new);
+    public static final RegistryObject<BaseLiquorItem> VODKA_BASE = ITEMS.register("vodka_base", BaseLiquorItem::new);
+    public static final RegistryObject<BaseLiquorItem> ACORN_WINE_BASE = ITEMS.register("acorn_wine_base", BaseLiquorItem::new);
 
-    public static RegistryObject<Item> foodEffectRemain(String name, int nutrition, float saturation, Item remain, EffectEntry... list) {
-        return ITEMS.register(name, () -> new EatFastItem(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)), 32, new ItemStack(remain)));
-    }
+    //None
+    public static final RegistryObject<Item> COCKTAIL = ITEMS.register("cocktail", CocktailItem::new);
+    public static final RegistryObject<Item> WATER = ITEMS.register("water", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> MILK = ITEMS.register("milk", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> EMPTY_CAN = ITEMS.register("empty_can", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> CARROT_SPICES = ITEMS.register("carrot_spices", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> ACORN = ITEMS.register("acorn", () -> new Item(FoodUtil.food(defaultProperties(), 2, 1F)));
+    public static final RegistryObject<Item> GEM_CARROT = ITEMS.register("gem_carrot", () -> new Item(FoodUtil.food(defaultProperties(), 6, 8)));
+    public static final RegistryObject<Item> RAW_BEEF_IN_DRIPLEAF = ITEMS.register("raw_beef_in_dripleaf", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> DUNGEON_PIZZA = ITEMS.register("dungeon_pizza", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> FEAST_PIZZA = ITEMS.register("feast_pizza", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> SHINY_PIZZA = ITEMS.register("shiny_pizza", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> RAW_SWEET_LOAF = ITEMS.register("raw_sweet_loaf", () -> new Item(defaultProperties()));
+    public static final RegistryObject<Item> PLATE_PIECES = ITEMS.register("plate_pieces", () -> new Item(defaultProperties()));
 
-    private static RegistryObject<Item> drinkEffectRemain(String name, int nutrition, float saturation, Item remain, EffectEntry... list) {
-        return ITEMS.register(name, () -> new EatFastItem(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)), 32, new ItemStack(remain)) {
-            @Override
-            public UseAnim getUseAnimation(ItemStack pStack) {
-                return UseAnim.DRINK;
-            }
-        });
-    }
-
-    private static RegistryObject<Item> fastFood(String name, int nutrition, float saturation, int tick) {
-        return ITEMS.register(name, () -> new EatFastItem(defaultProperties().food(defaultFood(nutrition, saturation).build()), tick));
-    }
-
-    private static RegistryObject<Item> fastFood(String name, int nutrition, float saturation, int tick, EffectEntry... list) {
-        return ITEMS.register(name, () -> new EatFastItem(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)), tick));
-    }
-
-    public static RegistryObject<Item> fastDrink(String name, int nutrition, float saturation, int tick, EffectEntry... list) {
-        return ITEMS.register(name, () -> new EatFastItem(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)), tick) {
-            @Override
-            public UseAnim getUseAnimation(ItemStack pStack) {
-                return UseAnim.DRINK;
-            }
-        });
-    }
-
-    private static RegistryObject<Item> canned(String name, int nutrition, float saturation, int tick, EffectEntry... list) {
-        return ITEMS.register(name, () -> new CannedItem(defaultProperties().food(addEffects(defaultFood(nutrition, saturation), list)), tick));
-    }
-
-    private static FoodProperties.Builder defaultFood(int nutrition, float saturation) {
-        return new FoodProperties.Builder().nutrition(nutrition).saturationMod(getTrueSaturation(nutrition, saturation));
-    }
-
-    private static float getTrueSaturation(int nutrition, float saturation) {
-        return saturation / (2f * nutrition);
-    }
-
-    private static Item.Properties defaultProperties() {
+    public static Item.Properties defaultProperties() {
         return new Item.Properties().tab(MAIN_TAB);
     }
 
-    private static Item.Properties cocktailProperties() {
+    public static Item.Properties cocktailProperties() {
         return new Item.Properties().tab(COCKTAIL_TAB);
     }
 
-    private static FoodProperties addEffects(FoodProperties.Builder builder, EffectEntry... list) {
-        for (EffectEntry effectEntry : list) {
-            builder.effect(effectEntry.effect, effectEntry.probability);
-        }
-
-        return builder.build();
-    }
 
     public static final CreativeModeTab COCKTAIL_TAB = new CreativeModeTab(MOD_ID + ".cocktail") {
         @NotNull

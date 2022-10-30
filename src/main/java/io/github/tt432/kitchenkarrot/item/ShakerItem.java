@@ -25,12 +25,14 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
+import static io.github.tt432.kitchenkarrot.item.ModItems.cocktailProperties;
+
 /**
  * @author DustW
  **/
 public class ShakerItem extends Item {
-    public ShakerItem(Properties pProperties) {
-        super(pProperties);
+    public ShakerItem() {
+        super(cocktailProperties().stacksTo(1));
     }
 
     @Override
@@ -42,19 +44,16 @@ public class ShakerItem extends Item {
                 if (!pLevel.isClientSide) {
                     NetworkHooks.openGui((ServerPlayer) pPlayer, new SimpleMenuProvider(
                             (id, inv, player) -> new ShakerMenu(id, inv), stack.getDisplayName()));
-                }
-                else {
+                } else {
                     pPlayer.playSound(ModSoundEvents.SHAKER_OPEN.get(), 0.5F,
                             pLevel.random.nextFloat() * 0.1F + 0.9F);
                 }
 
                 return InteractionResultHolder.sidedSuccess(stack, pLevel.isClientSide);
-            }
-            else if (!getFinish(stack)) {
+            } else if (!getFinish(stack)) {
                 if (!pLevel.isClientSide) {
                     pPlayer.startUsingItem(pUsedHand);
-                }
-                else {
+                } else {
                     SoundUtil.shakerSound(pPlayer, pLevel);
                 }
 

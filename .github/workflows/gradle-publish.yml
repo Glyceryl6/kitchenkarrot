@@ -46,7 +46,7 @@ jobs:
         if: always()
         run: |
           git config --global user.name DataGenCI
-          git add .
+          git add src/generated/*
           git commit -m "datagen" -a
           git push
 
@@ -54,13 +54,12 @@ jobs:
         if: always()
         run: gradle build -q
 
-      - name: Upload to Release Action
+      - name: Upload To Github Release
         if: always()
-        uses: Shopify/upload-to-release@v1.0.1
+        uses: xresloader/upload-to-github-release@v1.3.7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # Artifact name
-          name: kitchenkarrot-demo
-          # Path to the file to upload
-          path: build/libs
-          # secrets.GITHUB_TOKEN
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          file: "./build/libs/*.jar"
+          # 草稿模式
+          draft: true

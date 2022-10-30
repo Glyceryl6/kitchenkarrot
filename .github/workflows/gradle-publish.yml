@@ -46,7 +46,9 @@ jobs:
         if: always()
         run: |
           git config --global user.name DataGenCI
-          git add src/generated/*
+          git add .
+          git reset --mixed settings.xml
+          git reset --mixed toolchains.xml
           git commit -m "datagen" -a
           git push
 
@@ -61,5 +63,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           file: "./build/libs/*.jar"
-          # 草稿模式
-          draft: true

@@ -11,7 +11,6 @@
     "item.kitchenkarrot.sweet_loaf":"糖霜面包",
     "item.kitchenkarrot.acorn":"橡果",
     "item.kitchenkarrot.birch_sap":"桦树汁",
-    "item.kitchenkarrot.gem_carrot":"宝石胡萝卜",
     "item.kitchenkarrot.bamboo_potato":"竹片土豆",
     "item.kitchenkarrot.sweet_loaf_slice":"糖霜面包",
     "item.kitchenkarrot.pickled_sea_pickles":"腌制海泡菜",
@@ -101,7 +100,8 @@
     "item.kitchenkarrot.honey_brulee":"蜂蜜布蕾",
     "item.kitchenkarrot.lava_brulee":"熔岩布蕾",
     "item.kitchenkarrot.hi_nrg_brulee":"高能布蕾",
-    
+
+    "block.kitchenkarrot.gem_carrot":"宝石胡萝卜",
     "block.kitchenkarrot.sunflower_oil":"瓜子油",
     "block.kitchenkarrot.chorus_oil":"紫颂油",
     "block.kitchenkarrot.acorn_oil":"橡子油",

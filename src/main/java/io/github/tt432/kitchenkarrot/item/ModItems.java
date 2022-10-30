@@ -161,7 +161,6 @@ public class ModItems {
     public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(defaultProperties()));
     public static final RegistryObject<Item> CARROT_SPICES = ITEMS.register("carrot_spices", () -> new Item(defaultProperties()));
     public static final RegistryObject<Item> ACORN = ITEMS.register("acorn", () -> new Item(FoodUtil.food(defaultProperties(), 2, 1F)));
-    public static final RegistryObject<Item> GEM_CARROT = ITEMS.register("gem_carrot", () -> new Item(FoodUtil.food(defaultProperties(), 6, 8)));
     public static final RegistryObject<Item> RAW_BEEF_IN_DRIPLEAF = ITEMS.register("raw_beef_in_dripleaf", () -> new Item(defaultProperties()));
     public static final RegistryObject<Item> DUNGEON_PIZZA = ITEMS.register("dungeon_pizza", () -> new Item(defaultProperties()));
     public static final RegistryObject<Item> FEAST_PIZZA = ITEMS.register("feast_pizza", () -> new Item(defaultProperties()));

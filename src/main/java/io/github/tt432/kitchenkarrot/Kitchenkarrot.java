@@ -20,13 +20,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(Kitchenkarrot.MOD_ID)
 public class Kitchenkarrot {
     public static final String MOD_ID = "kitchenkarrot";
-    public static boolean farmersdelightLoaded;
-    public static boolean neapolitanLoaded;
 
     public Kitchenkarrot() {
-        farmersdelightLoaded = ModList.get().isLoaded("farmersdelight");
-        neapolitanLoaded = ModList.get().isLoaded("neapolitan");
-
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(bus);

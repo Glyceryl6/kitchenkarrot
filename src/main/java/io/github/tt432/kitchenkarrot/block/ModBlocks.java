@@ -4,6 +4,7 @@ import io.github.tt432.kitchenkarrot.Kitchenkarrot;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
@@ -13,6 +14,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -41,12 +43,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> COASTER = BLOCKS.register("coaster", () -> new CoasterBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2.0F, 2.0F)));
 
     public static final RegistryObject<Block> PLATE = BLOCKS.register("plate", () -> new PlateBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2.0F, 2.0F)));
+    public static final RegistryObject<Block> GEM_CARROT = BLOCKS.register("gem_carrot", GemCarrotCrop::new);
 
     private static RegistryObject<Block> oil(String name) {
         return BLOCKS.register(name, () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                 .noOcclusion()
                 .strength(2.0f, 2.0f)) {
             @Override
+            @NotNull
             @SuppressWarnings("deprecation")
             public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
                 return OIL;
@@ -59,6 +63,7 @@ public class ModBlocks {
                 .noOcclusion()
                 .strength(2.0f, 2.0f)) {
             @Override
+            @NotNull
             @SuppressWarnings("deprecation")
             public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
                 return SALT;

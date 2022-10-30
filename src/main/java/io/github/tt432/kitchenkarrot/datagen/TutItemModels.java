@@ -1,6 +1,7 @@
 package io.github.tt432.kitchenkarrot.datagen;
 
 import io.github.tt432.kitchenkarrot.block.PlateBlock;
+import io.github.tt432.kitchenkarrot.item.ModBlockItems;
 import io.github.tt432.kitchenkarrot.item.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -27,7 +28,7 @@ public class TutItemModels extends ItemModelProvider {
         ForgeRegistries.ITEMS.forEach(item -> {
             if (item.getRegistryName().getNamespace().equals(DataGenerators.MOD_ID)) {
                 if (item instanceof BlockItem) {
-                    if (item == ModItems.FOOD_FILLED_PLATE.get())
+                    if (item == ModItems.FOOD_FILLED_PLATE.get() || item == ModBlockItems.GEM_CARROT.get())
                         return;
                     withExistingParent(item.getRegistryName().getPath(), modLoc("block/" + item.getRegistryName().getPath()));
                 } else {

@@ -11,7 +11,6 @@
     "item.kitchenkarrot.sweet_loaf":"Sweet Loaf",
     "item.kitchenkarrot.acorn":"Acorn",
     "item.kitchenkarrot.birch_sap":"Birch Sap",
-    "item.kitchenkarrot.gem_carrot":"Gem Carrot",
     "item.kitchenkarrot.bamboo_potato":"Bamboo Potato",
     "item.kitchenkarrot.sweet_loaf_slice":"Sweet Loaf Slice",
     "item.kitchenkarrot.pickled_sea_pickles":"Pickled Sea Pickles",
@@ -102,6 +101,7 @@
     "item.kitchenkarrot.lava_brulee":"Lava Brulee",
     "item.kitchenkarrot.hi_nrg_brulee":"High Energy Brulee",
 
+    "block.kitchenkarrot.gem_carrot":"Gem Carrot",
     "block.kitchenkarrot.sunflower_oil":"Sunflower Oil",
     "block.kitchenkarrot.chorus_oil":"Chorus Oil",
     "block.kitchenkarrot.acorn_oil":"Acorn Oil",

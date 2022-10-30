@@ -1,6 +1,7 @@
 package io.github.tt432.kitchenkarrot.datagen;
 
 import io.github.tt432.kitchenkarrot.Kitchenkarrot;
+import io.github.tt432.kitchenkarrot.datagen.loottable.ModLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +24,7 @@ public class DataGenerators {
         }
 
         if (event.includeServer()) {
+            event.getGenerator().addProvider(new ModLootTableProvider(event.getGenerator()));
             var blockTag = new TutBlockTags(generator, file);
             generator.addProvider(blockTag);
             generator.addProvider(new TutItemTags(generator, blockTag, event.getExistingFileHelper()));

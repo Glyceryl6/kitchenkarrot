@@ -32,15 +32,17 @@ jobs:
 
       - name: Cache
         if: always()
-        uses: actions/cache@v3.0.11
+        uses: actions/cache@v3
         with:
-          # A list of files, directories, and wildcard patterns to cache and restore
-          path: ~/.cache
-          # An explicit key for restoring and saving the cache
-          key: Gradle-Cache
+          path: |
+            .gradle/caches
+            .gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: Run DataGen
-        run: gradle runData -q
+        run: gradle runData -q --no-daemon
 
       - name: Push
         if: always()
@@ -56,10 +58,12 @@ jobs:
         if: always()
         run: gradle build -q
 
-      - name: Upload To Github Release
+      - name: Upload files to a GitHub release
         if: always()
-        uses: xresloader/upload-to-github-release@v1.3.7
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: svenstaro/upload-release-action@2.3.0
         with:
-          file: "./build/libs/*.jar"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}-Alpha
+          file: build/libs/*.jar
+          overwrite: true
+          file_glob: true

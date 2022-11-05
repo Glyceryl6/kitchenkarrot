@@ -34,15 +34,13 @@ jobs:
         if: always()
         uses: actions/cache@v3
         with:
-          path: |
-            .gradle/caches
-            .gradle/wrapper
+          path: build/**/*
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 
       - name: Run DataGen
-        run: gradle runData -q --no-daemon
+        run: gradle runData -q
 
       - name: Push
         if: always()

@@ -1,0 +1,100 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "kitchenkarrot:gem_karrot"
+          }
+        ]
+      },
+      {
+        "rolls": {
+          "type": "minecraft:binomial",
+          "n": 2,
+          "p": 0.7
+        },
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "kitchenkarrot:gem_carrot",
+            "conditions": [
+              {
+                "condition": "minecraft:block_state_property",
+                "block": "kitchenkarrot:gem_carrots",
+                "properties": {
+                  "age": "7"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": {
+          "type": "minecraft:binomial",
+          "n": 4,
+          "p": 0.33
+        },
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "name": "minecraft:iron_nugget"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 2,
+            "name": "minecraft:gold_nugget"
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:binomial_with_bonus_count",
+            "parameters": {
+              "extra": 4,
+              "probability": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "rolls": {
+          "type": "minecraft:binomial",
+          "n": 2,
+          "p": 0.005
+        },
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 10,
+            "name": "minecraft:diamond"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:netherite_scrap",
+            "functions": [
+              {
+                "function": "minecraft:apply_bonus",
+                "enchantment": "minecraft:fortune",
+                "formula": "minecraft:binomial_with_bonus_count",
+                "parameters": {
+                  "extra": 1,
+                  "probability": 0.005
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "functions": [
+      {
+        "function": "minecraft:explosion_decay"
+      }
+    ]
+  }
+  

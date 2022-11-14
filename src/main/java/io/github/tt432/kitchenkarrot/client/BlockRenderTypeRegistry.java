@@ -22,6 +22,7 @@ public class BlockRenderTypeRegistry {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.FINE_SALT.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.SEA_SALT.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCK_SALT.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GEM_CARROT.get(), RenderType.cutout());
         });
     }
 }

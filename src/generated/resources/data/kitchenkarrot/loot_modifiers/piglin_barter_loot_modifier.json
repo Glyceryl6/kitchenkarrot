@@ -1,0 +1,11 @@
+{
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:gameplay/piglin_bartering"
+    }
+  ],
+  "item": "kitchenkarrot:canned_hoglin_confit",
+  "weight": 40,
+  "type": "kitchenkarrot:piglin_barter_loot_modifier"
+}

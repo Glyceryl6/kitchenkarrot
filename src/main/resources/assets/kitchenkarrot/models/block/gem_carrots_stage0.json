@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "kitchenkarrot:block/gem_carrots_stage0"
+  }
+}

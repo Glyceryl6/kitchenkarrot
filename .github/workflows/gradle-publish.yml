@@ -30,6 +30,19 @@ jobs:
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
+#      - name: Run DataGen
+#        run: gradle runData -q
+#
+#      - name: Push
+#        if: always()
+#        run: |
+#          git config --global user.name DataGenCI
+#          git add .
+#          git reset --mixed settings.xml
+#          git reset --mixed toolchains.xml
+#          git commit -m "datagen" -a
+#          git push
+
       - name: Cache
         if: always()
         uses: actions/cache@v3
@@ -38,19 +51,6 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-
-      - name: Run DataGen
-        run: gradle runData -q
-
-      - name: Push
-        if: always()
-        run: |
-          git config --global user.name DataGenCI
-          git add .
-          git reset --mixed settings.xml
-          git reset --mixed toolchains.xml
-          git commit -m "datagen" -a
-          git push
 
       - name: Build with Gradle
         if: always()

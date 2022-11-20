@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "* ",
+    " *"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:sunflower"
+    }
+  },
+  "result": {
+    "item": "kitchenkarrot:sunflower_oil"
+  }
+}

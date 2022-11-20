@@ -13,10 +13,10 @@
       "tag": "forge:cooking_oil"
     },
     "3": {
-      "tag": "forge:foods/meat"
+      "tag": "kitchenkarrot:meat"
     },
     "4": {
-      "tag": "forge:crops/wheat"
+      "tag": "forge:bread"
     }
   },
   "result": {

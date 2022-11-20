@@ -13,6 +13,7 @@
     }
   },
   "result": {
-    "item": "kitchenkarrot:sea_salt"
+    "item": "kitchenkarrot:sea_salt",
+    "count": 2
   }
 }

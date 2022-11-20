@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "kitchenkarrot:rock_salt"
+    "item": "kitchenkarrot:rock_salt",
+    "count": 2
   }
 }

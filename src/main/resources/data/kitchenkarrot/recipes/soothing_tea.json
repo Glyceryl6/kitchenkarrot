@@ -14,10 +14,10 @@
       "item": "kitchenkarrot:ice_cubes"
     },
     {
-      "item": "minecraft:potion"
+      "item": "kitchenkarrot:water"
     },
     {
-      "item": "minecraft:potion"
+      "item": "kitchenkarrot:water"
     }
   ],
   "result": {

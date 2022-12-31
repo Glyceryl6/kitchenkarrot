@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:cooked_rabbit",
-    "kitchenkarrot:cooked_veggie_rabbit"
-  ]
+    "minecraft:cooked_rabbit"
+    ]
 }

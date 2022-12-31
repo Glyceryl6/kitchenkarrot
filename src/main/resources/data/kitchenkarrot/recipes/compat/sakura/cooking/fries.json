@@ -1,25 +1,33 @@
 {
-  "type": "sakura:cooking",
-  "ingredients": [
+  "type":"forge:conditional",
+  "recipes":[
     {
-      "tag": "forge:salt"
-    },
-    {
-      "item": "minecraft:potato"
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid":""
+        }
+      ],
+
+    "recipe":{
+      "type": "sakura:cooking",
+      "ingredients": [
+        {
+          "tag": "forge:salt"
+        },
+        {
+          "item": "minecraft:potato"
+        }
+      ],
+      "fluid": {
+        "fluidTag": "forge:food_oil",
+        "amount": 125
+      },
+      "result": {
+        "item": "kitchenkarrot:fries"
+      },
+      "recipeTime": 200
     }
-  ],
-  "fluid": {
-    "fluidTag": "forge:food_oil",
-    "amount": 125
-  },
-  "result": {
-    "item": "kitchenkarrot:fries"
-  },
-  "recipeTime": 200,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "sakuramod"
-    }
+  }
   ]
 }

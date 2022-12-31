@@ -1,26 +1,34 @@
 {
-  "type": "thermal:smelter",
-  "ingredients": [
-    {      
-    "tag": "forge:crops/carrot",
-    "count": 2
-    },
-    {      
-      "item": "thermal:cinnabar",
-      "count": 1
-    }
-  ],
-  "result": [
+  "type":"forge:conditional",
+  "recipes":[
     {
-      "item": "kitchenkarrot:gem_carrot",
-      "count": 1
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid":""
+        }
+      ],
+
+    "recipe":{
+      "type": "thermal:smelter",
+      "ingredients": [
+        {      
+        "tag": "forge:crops/carrot",
+        "count": 1
+        },
+        {      
+          "item": "thermal:cinnabar",
+          "count": 1
+        }
+      ],
+      "result": [
+        {
+          "item": "kitchenkarrot:gem_carrot",
+          "count": 1
+        }
+      ],
+      "energy": 6400
     }
-  ],
-  "energy": 12800,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "thermal"
-    }
+  }
   ]
 }

@@ -2,7 +2,7 @@
   "parent": "kitchenkarrot:get_acorn",
   "display": {
     "icon": {
-      "item": "kitchenkarrot:empty_plate"
+      "item": "kitchenkarrot:plate_item"
     },
     "title": {
       "translate": "advancement.kitchenkarrot.place_plate.title"

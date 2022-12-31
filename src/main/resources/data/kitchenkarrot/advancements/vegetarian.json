@@ -2,7 +2,7 @@
   "parent": "kitchenkarrot:get_gem_carrot",
   "display": {
     "icon": {
-      "item": "kitchenkarrot:cooked_veggie_beef"
+      "item": "kitchenkarrot:raw_veggie_beef"
     },
     "title": {
       "translate": "advancement.kitchenkarrot.vegetarian.title"

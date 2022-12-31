@@ -2,7 +2,7 @@
   "parent": "kitchenkarrot:get_gem_carrot",
   "display": {
     "icon": {
-      "item": "kitchenkarrot:cooked_veggie_pork"
+      "item": "kitchenkarrot:cooked_veggie_beef"
     },
     "title": {
       "translate": "advancement.kitchenkarrot.vegetarian.title"
@@ -39,16 +39,6 @@
         }
       }
     },
-    "raw_rabbit": {
-      "trigger": "minecraft:consume_item",
-      "conditions": {
-        "item": {
-          "items": [
-            "kitchenkarrot:raw_veggie_rabbit"
-          ]
-        }
-      }
-    },    
     "cooked_beef": {
       "trigger": "minecraft:consume_item",
       "conditions": {
@@ -68,16 +58,6 @@
           ]
         }
       }
-    },
-    "cooked_rabbit": {
-      "trigger": "minecraft:consume_item",
-      "conditions": {
-        "item": {
-          "items": [
-            "kitchenkarrot:cooked_veggie_rabbit"
-          ]
-        }
-      }
     }
   },
   "requirements": [
@@ -86,9 +66,6 @@
     ],
     [
       "raw_pork","cooked_pork"
-    ],    
-    [
-      "raw_rabbit","cooked_rabbit"
     ]
   ]
 }

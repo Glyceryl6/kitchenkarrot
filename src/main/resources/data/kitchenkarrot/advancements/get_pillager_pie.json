@@ -1,0 +1,37 @@
+{
+  "parent": "kitchenkarrot:get_gem_carrot",
+  "display": {
+    "icon": {
+      "item": "kitchenkarrot:pillager_pie"
+    },
+    "title": {
+      "translate": "advancement.kitchenkarrot.get_pillager_pie.title"
+    },
+    "description": {
+      "translate": "advancement.kitchenkarrot.get_pillager_pie.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pillager_pie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kitchenkarrot:pillager_pie"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pillager_pie"
+    ]
+  ]
+}

@@ -205,5 +205,15 @@
     "advancement.kitchenkarrot.drink_liquor.title":"Cheers!",
     "advancement.kitchenkarrot.drink_liquor.desc":"Drink your very first drop of alcohol",
     "advancement.kitchenkarrot.get_cocktail.title":"Art of Bartending",
-    "advancement.kitchenkarrot.get_cocktail.desc":"Use your shaker to feel the collision of liquid,and pour whatever you get"
+    "advancement.kitchenkarrot.get_cocktail.desc":"Use your shaker to feel the collision of liquid,and pour out whatever you get",
+    "advancement.kitchenkarrot.get_pillager_pie.title":"Vicious Delicious",
+    "advancement.kitchenkarrot.get_pillager_pie.desc":"Loot a classic illager dish from the illagers",
+    "advancement.kitchenkarrot.place_air_compressor.title":"Is That A Water Cooler?",
+    "advancement.kitchenkarrot.place_air_compressor.desc":"Place a modern machine for modern dishes",
+    "advancement.kitchenkarrot.get_canned_food.title":"Molecular Gastronome",
+    "advancement.kitchenkarrot.get_canned_food.desc":"Craft any canned food from the air compressor",
+    "advancement.kitchenkarrot.place_plate.title":"Breakfast's Served!",
+    "advancement.kitchenkarrot.place_plate.desc":"Place a plate as a cutting board or decoration",
+    "advancement.kitchenkarrot.use_knife.title":"Chop Chop",
+    "advancement.kitchenkarrot.use_knife,desc":"Cutting a large meal into smaller ones to make it easy to share and digest"
 }

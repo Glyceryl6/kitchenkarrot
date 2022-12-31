@@ -1,27 +1,30 @@
 {
-  "parent": "kitchenkarrot:place_air_compressor",
+  "parent": "kitchenkarrot:place_plate",
   "display": {
     "icon": {
-      "item": "kitchenkarrot:dragon_breath_coke"
+      "item": "kitchenkarrot:knife"
     },
     "title": {
-      "translate": "advancement.kitchenkarrot.drink_dgcoke.title"
+      "translate": "advancement.kitchenkarrot.use_knife.title"
     },
     "description": {
-      "translate": "advancement.kitchenkarrot.drink_dgcoke.desc"
+      "translate": "advancement.kitchenkarrot.use_knife.desc"
     },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
+  "rewards": {
+    "experience": 500
+  },
   "criteria": {
-    "coke": {
-      "trigger": "minecraft:consume_item",
+    "knife": {
+      "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
           "items": [
-            "kitchenkarrot:dragon_breath_coke"
+            "kitchenkarrot:knife"
           ]
         }
       }
@@ -29,7 +32,7 @@
   },
   "requirements": [
     [
-      "coke"
+      "knife"
     ]
   ]
 }

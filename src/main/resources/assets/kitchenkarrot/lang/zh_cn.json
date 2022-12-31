@@ -205,5 +205,15 @@
     "advancement.kitchenkarrot.drink_liquor.title":"干杯！",
     "advancement.kitchenkarrot.drink_liquor.desc":"饮下你的第一瓶酒",
     "advancement.kitchenkarrot.get_cocktail.title":"调酒的艺术",
-    "advancement.kitchenkarrot.get_cocktail.desc":"从你的摇酒壶里倒出地道的鸡尾酒"
+    "advancement.kitchenkarrot.get_cocktail.desc":"从你的摇酒壶里倒出地道的鸡尾酒",
+    "advancement.kitchenkarrot.get_pillager_pie.title":"Vicious Delicious",
+    "advancement.kitchenkarrot.get_pillager_pie.desc":"从灾厄村民那里抢一个掠夺者派",
+    "advancement.kitchenkarrot.place_air_compressor.title":"这是个饮水机吗？",
+    "advancement.kitchenkarrot.place_air_compressor.desc":"现代菜要配现代机器",
+    "advancement.kitchenkarrot.get_canned_food.title":"分子美食家",
+    "advancement.kitchenkarrot.get_canned_food.desc":"用空气压缩机制作任意罐头",
+    "advancement.kitchenkarrot.place_plate.title":"早餐上桌咯！",
+    "advancement.kitchenkarrot.place_plate.desc":"用盘子切菜或者装饰餐厅",
+    "advancement.kitchenkarrot.use_knife.title":"切磋琢磨",
+    "advancement.kitchenkarrot.use_knife,desc":"把大份食物切成小份方便分享，也有助于消化"
 }

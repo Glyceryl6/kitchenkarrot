@@ -10,10 +10,10 @@
     "description": {
       "translate": "advancement.kitchenkarrot.use_knife.desc"
     },
-    "frame": "challenge",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false
+    "hidden": true
   },
   "rewards": {
     "experience": 500

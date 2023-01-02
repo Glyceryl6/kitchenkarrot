@@ -1,5 +1,5 @@
 {
-  "parent": "kitchenkarrot:get_acorn",
+  "parent": "kitchenkarrot:root",
   "display": {
     "icon": {
       "item": "kitchenkarrot:plate_item"

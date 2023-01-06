@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "kitchenkarrot:gem_carrot"
+      "item": "kitchenkarrot:gem_carrot"
     },
     {
       "item": "minecraft:paper"

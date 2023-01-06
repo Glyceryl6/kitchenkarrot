@@ -1,0 +1,21 @@
+{
+  "parent": "kitchenkarrot:recipes/root",
+  "rewards": {
+    "recipes": [
+      "kitchenkarrot:coral_coke"
+    ]
+  },
+  "criteria": {
+    "air_compressor": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "kitchenkarrot:air_compressor"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "air_compressor"
+    ]
+  ]
+}

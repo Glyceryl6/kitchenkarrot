@@ -1,0 +1,43 @@
+{
+  "parent": "kitchenkarrot:recipes/root",
+  "rewards": {
+    "recipes": [
+      "kitchenkarrot:dragon_breath_coke"
+    ]
+  },
+  "criteria": {
+    "air_compressor": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "kitchenkarrot:air_compressor"
+      }
+    },
+    "dragon_breath": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dragon_breath"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "kitchenkarrot:dragon_breath_coke"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "air_compressor",
+      "dragon_breath"
+    ],
+    [
+      "has_the_recipe"
+    ]
+  ]
+}

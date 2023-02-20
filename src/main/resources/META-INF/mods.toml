@@ -21,7 +21,7 @@ modId = "kitchenkarrot" #mandatory
 # see the associated build.gradle script for how to populate this completely automatically during a build
 version = "${file.jarVersion}" #mandatory
 # A display name for the mod
-displayName = "Kitchenkarrot" #mandatory
+displayName = "KitchenKarrot" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -34,7 +34,7 @@ displayName = "Kitchenkarrot" #mandatory
 authors = "Zoshsgahdnkc,Glyceryl6,DustW" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description = '''
-An Energetic Food Expansion-Fast Food,Dessert,Soft Drinks,Alcohol and more.
+An Energetic Food Expansion-Fast Food,Dessert,Soft Drinks,Alcohol and More.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.kitchenkarrot]] #optional

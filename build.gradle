@@ -18,7 +18,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 group = 'io.github.tt432'
-version = '1.18.2-2-3'
+version = '1.18.2-0.3.0'
 
 java {
     archivesBaseName = 'kitchenkarrot'
@@ -179,8 +179,6 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
 
     implementation fg.deobf("mezz.jei:jei-1.18.2-forge:10.0.0.191")
-    implementation fg.deobf("curse.maven:farmerdelight-398521:3834150")
-    implementation fg.deobf("curse.maven:icarus-575424:3807882")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }

@@ -9,12 +9,12 @@ import io.github.tt432.kitchenkarrot.recipes.register.RecipeManager;
 import io.github.tt432.kitchenkarrot.sound.ModSoundEvents;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -187,5 +187,16 @@ public class ShakerMenu extends KKMenu {
             pPlayer.playSound(ModSoundEvents.SHAKER_CLOSE.get(), 0.5F,
                     pPlayer.getRandom().nextFloat() * 0.1F + 0.9F);
         }
+    }
+
+    @Override
+    public void clicked(int slot, int button, ClickType type, Player player) {
+        try{
+            Slot slotInstance = slots.get(slot);
+            if (slotInstance.getItem().getItem() instanceof ShakerItem){
+                return;
+            }
+        }catch (Exception ignored){}
+        super.clicked(slot, button, type, player);
     }
 }
